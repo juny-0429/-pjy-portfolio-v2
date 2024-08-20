@@ -1,10 +1,23 @@
 import theme from '@/theme';
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
+
+const bounce = keyframes`
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+`;
 
 export const mainHomeCss = {
   wrapper: css`
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 33px;
     padding: 60px 0;
   `,
@@ -51,5 +64,14 @@ export const mainHomeCss = {
 
   profileImage: css`
     border-radius: 10px;
+  `,
+
+  downArrow: css`
+    position: absolute;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+    color: ${theme.colors.mainGray};
+    animation: ${bounce} 1.5s infinite;
   `,
 };
