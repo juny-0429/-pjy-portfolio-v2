@@ -9,7 +9,7 @@ export const headerCss = {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    padding: 15px 10px;
 
     background: ${theme.colors.white};
   `,
@@ -21,12 +21,11 @@ export const headerCss = {
 
   headerMenu: css`
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 15px;
+    right: 10px;
     width: 24px;
     height: 24px;
 
     color: ${theme.colors.mainLightBlack};
   `,
 };
- 

@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { pretendard } from '@/theme/fonts';
 import MainHome from '@/features/home/components/MainHome';
-import Header from '@/components/Header/Header';
 
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
       `}</style>
 
       <div style={{ width: '100%' }}>
-        <Header />
         {/* home */}
         <MainHome />
       </div>
