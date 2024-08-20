@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { pretendard } from '@/theme/fonts';
+import { Element } from 'react-scroll';
 import MainHome from '@/features/home/components/MainHome';
 
 export default function Home() {
@@ -20,7 +21,21 @@ export default function Home() {
 
       <div>
         {/* home */}
-        <MainHome />
+        <Element name="ABOUT">
+          <MainHome />
+        </Element>
+        <Element name="SKILLS">
+          <MainHome />
+        </Element>
+        <Element name="PROJECT">
+          <MainHome />
+        </Element>
+        <Element name="CAREER">
+          <MainHome />
+        </Element>
+        <Element name="CONNECT">
+          <MainHome />
+        </Element>
       </div>
     </>
   );
