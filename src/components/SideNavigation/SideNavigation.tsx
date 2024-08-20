@@ -1,5 +1,6 @@
 import FeatherIcons from '@/theme/featherIcons';
 import { sideNavigationCss } from './SideNavigation.styles';
+import { animateScroll as scroll } from 'react-scroll';
 
 export default function SideNavigation() {
   return (
@@ -11,7 +12,7 @@ export default function SideNavigation() {
       {/* 다크 모드 */}
       <FeatherIcons.Sun />
       {/* 최상단으로 이동하기 */}
-      <FeatherIcons.ChevronsUp />
+      <FeatherIcons.ChevronsUp onClick={() => scroll.scrollToTop()} />
     </div>
   );
 }
