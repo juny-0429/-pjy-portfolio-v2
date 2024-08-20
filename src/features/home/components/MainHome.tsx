@@ -1,6 +1,7 @@
 import { mainHomeCss } from './MainHome.styles';
 import Image from 'next/image';
 import PjyProfileImage from '@/assets/images/park-junyoung-profile.jpg';
+import FeatherIcons from '@/theme/featherIcons';
 
 export default function MainHome() {
   return (
@@ -21,6 +22,8 @@ export default function MainHome() {
 
         <Image src={PjyProfileImage} css={mainHomeCss.profileImage} width={200} height={300} alt="pjy profile image" />
       </div>
+
+      <FeatherIcons.ChevronDown css={mainHomeCss.downArrow} />
     </div>
   );
 }
