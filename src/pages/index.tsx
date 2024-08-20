@@ -18,7 +18,7 @@ export default function Home() {
         }
       `}</style>
 
-      <div style={{ width: '100%' }}>
+      <div>
         {/* home */}
         <MainHome />
       </div>
