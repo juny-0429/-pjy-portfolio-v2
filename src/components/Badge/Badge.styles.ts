@@ -43,6 +43,7 @@ export const badgeCss = {
     justify-content: center;
     align-items: center;
     width: fit-content;
+    box-sizing: border-box;
 
     /* mobile default 23 */
     ${badgeSize[23]}
