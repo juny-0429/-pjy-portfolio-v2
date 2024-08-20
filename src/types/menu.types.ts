@@ -1,1 +1,1 @@
-export type MainMenu = 'ABOUT' | 'SKILLS' | 'PROJECT' | 'CAREER' | 'CONNECT';
+export type MainMenu = 'JUNY' | 'ABOUT' | 'SKILLS' | 'PROJECT' | 'CAREER' | 'CONNECT';

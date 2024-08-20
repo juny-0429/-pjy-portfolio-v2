@@ -20,7 +20,9 @@ export default function Home() {
       `}</style>
 
       <div>
-        {/* home */}
+        <Element name="JUNY">
+          <MainHome />
+        </Element>
         <Element name="ABOUT">
           <MainHome />
         </Element>
