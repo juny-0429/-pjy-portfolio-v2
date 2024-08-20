@@ -16,7 +16,8 @@
       "@/*": ["./src/*"],
       "@/assets/*": ["./public/assets/*"]
     },
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "types": ["@emotion/react/types/css-prop"]
   },
   "include": ["custom.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "deprecated"]
