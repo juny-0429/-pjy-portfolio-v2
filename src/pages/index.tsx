@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { pretendard } from '@/theme/fonts';
 import { Element } from 'react-scroll';
 import MainHome from '@/features/home/components/MainHome';
+import MainAbout from '@/features/about/components/MainAbout';
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
           <MainHome />
         </Element>
         <Element name="ABOUT">
-          <MainHome />
+          <MainAbout />
         </Element>
         <Element name="SKILLS">
           <MainHome />
