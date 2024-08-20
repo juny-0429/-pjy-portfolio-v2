@@ -3,9 +3,9 @@ import { css } from '@emotion/react';
 
 export const commonCss = {
   fullPage: css`
-    /* header: 30px, footer: 72px */
-    min-height: calc(100dvh - 30px - 72px);
-    padding: 15px 10px;
+    /* header: 54px, footer: 105px */
+    min-height: calc(100dvh - 54px - 105px);
+    padding: 0 10px;
 
     /* TODO: 다크 모드시 글자 색상 설정 하기  */
     color: ${theme.colors.mainLightBlack};
