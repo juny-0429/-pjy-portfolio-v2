@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d .next",
+    "deploy": "npm run build && gh-pages -d out",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky"
@@ -20,7 +19,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-feather": "^2.0.10",
-    "react-scroll": "^1.9.0"
+    "react-scroll": "^1.9.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^11.11.0",
