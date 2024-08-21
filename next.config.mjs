@@ -8,6 +8,17 @@ const nextConfig = {
     scrollRestoration: true,
   },
 
+  // GitHub Pages 배포 관련 설정 추가
+  basePath: '/pjy-portfolio-v2',
+  assetPrefix: '/pjy-portfolio-v2/',
+  trailingSlash: true,
+
+  output: 'export',
+
+  images: {
+    unoptimized: true,
+  },
+
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
