@@ -1,4 +1,3 @@
-import theme from '@/theme';
 import { css, keyframes } from '@emotion/react';
 
 const totalBrand = 10;
