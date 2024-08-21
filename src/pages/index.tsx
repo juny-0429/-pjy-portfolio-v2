@@ -3,6 +3,7 @@ import { pretendard } from '@/theme/fonts';
 import { Element } from 'react-scroll';
 import MainHome from '@/features/home/components/MainHome';
 import MainAbout from '@/features/about/components/MainAbout';
+import MainSkills from '@/features/skills/components/MainSkills';
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
           <MainAbout />
         </Element>
         <Element name="SKILLS">
-          <MainHome />
+          <MainSkills />
         </Element>
         <Element name="PROJECT">
           <MainHome />
