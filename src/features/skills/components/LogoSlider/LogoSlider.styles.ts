@@ -1,35 +1,32 @@
 import { css, keyframes } from '@emotion/react';
 
-const totalBrand = 10;
-const logoWidth = 30;
-const logoHeight = 30;
-const totalLogoWidth = totalBrand * logoWidth;
-
 const slideLeftAnimation = keyframes`
-  100% {
-    transform: translateX(-${totalLogoWidth}px);
-  }
+from {
+transform: translateX(0);
+} to {
+  transform: translateX(-100%);
+}
 `;
 
 export const logoSliderCss = {
   logoList: css`
-    padding: 100px 0 50px;
+    padding: 0 0 100px;
   `,
 
-  slider: css`
+  logos: css`
     position: relative;
     left: -34px;
-    display: flex;
-    align-items: center;
+    width: 100vw;
     overflow: hidden;
-    width: 100dvw;
-    height: ${logoHeight}px;
+    white-space: nowrap;
+    background: white;
 
     &::before,
     &::after {
+      z-index: 100;
       position: absolute;
       content: '';
-      width: ${logoWidth}px;
+      width: 30px;
       height: 100%;
     }
 
@@ -44,20 +41,8 @@ export const logoSliderCss = {
     }
   `,
 
-  brands: css`
-    list-style: none;
-    display: flex;
-    width: ${totalLogoWidth}px;
-    height: ${logoHeight}px;
-
-    animation: ${slideLeftAnimation} 3s linear infinite;
-  `,
-
-  brandLogo: css`
-    width: ${logoWidth}px;
-    height: ${logoHeight}px;
-    font-size: 2rem;
-    text-align: center;
-    margin-left: 70px;
+  logoSlide: css`
+    display: inline-block;
+    animation: ${slideLeftAnimation} 10s linear infinite;
   `,
 };

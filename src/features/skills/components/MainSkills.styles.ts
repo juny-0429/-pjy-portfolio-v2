@@ -2,6 +2,10 @@ import theme from '@/theme';
 import { css } from '@emotion/react';
 
 export const mainSkillsCss = {
+  wrapper: css`
+    padding: 170px 0 100px;
+  `,
+
   skillCategoryList: css`
     display: flex;
     flex-direction: column;
