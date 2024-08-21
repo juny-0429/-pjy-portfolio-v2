@@ -2,6 +2,7 @@ import { css, keyframes } from '@emotion/react';
 
 const totalBrand = 10;
 const logoWidth = 30;
+const logoHeight = 30;
 const totalLogoWidth = totalBrand * logoWidth;
 
 const slideLeftAnimation = keyframes`
@@ -17,11 +18,12 @@ export const logoSliderCss = {
 
   slider: css`
     position: relative;
-    /* left: -32px; */
+    left: -34px;
     display: flex;
     align-items: center;
     overflow: hidden;
     width: 100dvw;
+    height: ${logoHeight}px;
 
     &::before,
     &::after {
@@ -46,13 +48,14 @@ export const logoSliderCss = {
     list-style: none;
     display: flex;
     width: ${totalLogoWidth}px;
-    height: ${logoWidth}px;
+    height: ${logoHeight}px;
 
     animation: ${slideLeftAnimation} 3s linear infinite;
   `,
 
   brandLogo: css`
     width: ${logoWidth}px;
+    height: ${logoHeight}px;
     font-size: 2rem;
     text-align: center;
     margin-left: 70px;
