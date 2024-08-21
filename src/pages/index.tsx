@@ -5,6 +5,7 @@ import MainHome from '@/features/home/components/MainHome';
 import MainAbout from '@/features/about/components/MainAbout';
 import MainSkills from '@/features/skills/components/MainSkills';
 import MainConnect from '@/features/connect/components/MainConnect';
+import MainCareer from '@/features/career/components/MainCareer';
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
           <MainHome />
         </Element>
         <Element name="CAREER">
-          <MainHome />
+          <MainCareer />
         </Element>
         <Element name="CONNECT">
           <MainConnect />
