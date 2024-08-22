@@ -6,6 +6,7 @@ import MainAbout from '@/features/about/components/MainAbout';
 import MainSkills from '@/features/skills/components/MainSkills';
 import MainConnect from '@/features/connect/components/MainConnect';
 import MainCareer from '@/features/career/components/MainCareer';
+import MainProject from '@/features/project/components/MainProject';
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
           <MainSkills />
         </Element>
         <Element name="PROJECT">
-          <MainHome />
+          <MainProject />
         </Element>
         <Element name="CAREER">
           <MainCareer />

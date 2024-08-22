@@ -4,6 +4,14 @@ import theme from '@/theme';
 import { colorMap } from '@/data/badge.data';
 
 export const badgeSize = {
+  14: css`
+    height: 14px;
+    padding: 1px 5px;
+
+    font-size: 10px;
+    font-weight: 400;
+  `,
+
   23: css`
     height: 23px;
     padding: 4px;
