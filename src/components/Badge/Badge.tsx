@@ -1,8 +1,9 @@
 import { Interpolation, Theme } from '@emotion/react';
 import { PropsWithChildren, useMemo } from 'react';
 import { badgeCss } from './Badge.styles';
+import { SkillColor } from '@/features/skills/data/skillColorMap.data';
 
-export type BadgeColor = 'green' | 'lightGreen' | 'deepBlue' | 'blue' | 'beige' | 'lightBlack' | 'gray' | 'lightGray' | 'orange';
+export type BadgeColor = 'green' | 'lightGreen' | 'deepBlue' | 'blue' | 'beige' | 'lightBlack' | 'gray' | 'lightGray' | 'orange' | SkillColor;
 export type BadgeType = 'rounded' | 'capsule';
 export type BadgeFillStyle = 'fill' | 'outline';
 

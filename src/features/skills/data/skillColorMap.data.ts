@@ -1,0 +1,40 @@
+export type SkillType = 'HTML' | 'CSS' | 'SCSS' | 'REACT' | 'NEXT' | 'VUE' | 'JAVA' | 'SPRING BOOT' | 'RESTful' | 'ORACLE' | 'MUI' | 'FIGMA' | 'GITHUB' | 'GITBOOK' | 'NOTION' | 'TYPESCRIPT' | 'JPA';
+
+export type SkillColor =
+  | 'HTML_COLOR'
+  | 'CSS_COLOR'
+  | 'SCSS_COLOR'
+  | 'REACT_COLOR'
+  | 'NEXT_COLOR'
+  | 'VUE_COLOR'
+  | 'JAVA_COLOR'
+  | 'SPRING_BOOT_COLOR'
+  | 'RESTful_COLOR'
+  | 'ORACLE_COLOR'
+  | 'MUI_COLOR'
+  | 'FIGMA_COLOR'
+  | 'GITHUB_COLOR'
+  | 'GITBOOK_COLOR'
+  | 'NOTION_COLOR'
+  | 'TYPESCRIPT_COLOR'
+  | 'JPA_COLOR';
+
+export const skillColorMap: { [key in SkillType]: SkillColor } = {
+  HTML: 'HTML_COLOR',
+  CSS: 'CSS_COLOR',
+  SCSS: 'SCSS_COLOR',
+  REACT: 'REACT_COLOR',
+  NEXT: 'NEXT_COLOR',
+  VUE: 'VUE_COLOR',
+  JAVA: 'JAVA_COLOR',
+  'SPRING BOOT': 'SPRING_BOOT_COLOR',
+  RESTful: 'RESTful_COLOR',
+  ORACLE: 'ORACLE_COLOR',
+  MUI: 'MUI_COLOR',
+  FIGMA: 'FIGMA_COLOR',
+  GITHUB: 'GITHUB_COLOR',
+  GITBOOK: 'GITBOOK_COLOR',
+  NOTION: 'NOTION_COLOR',
+  TYPESCRIPT: 'TYPESCRIPT_COLOR',
+  JPA: 'JPA_COLOR',
+};
