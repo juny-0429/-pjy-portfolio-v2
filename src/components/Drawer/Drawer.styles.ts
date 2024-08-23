@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import { commonCss } from '@/styles/common.styles';
 import { css } from '@emotion/react';
 
 export const drawerDirectionCss = {
