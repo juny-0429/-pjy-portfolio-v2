@@ -1,9 +1,12 @@
+import { commonCss } from '@/styles/common.styles';
 import theme from '@/theme';
 import { css } from '@emotion/react';
 
 export const mainProjectCss = {
   wrapper: css`
     padding: 100px 0;
+
+    ${commonCss.sectionMinHeight}
   `,
 
   projectList: css`

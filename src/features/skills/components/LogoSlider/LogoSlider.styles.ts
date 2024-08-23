@@ -15,7 +15,7 @@ export const logoSliderCss = {
 
   logos: css`
     position: relative;
-    left: -34px;
+    left: -44px;
     width: 100vw;
     overflow: hidden;
     white-space: nowrap;

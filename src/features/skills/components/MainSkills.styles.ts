@@ -1,9 +1,12 @@
+import { commonCss } from '@/styles/common.styles';
 import theme from '@/theme';
 import { css } from '@emotion/react';
 
 export const mainSkillsCss = {
   wrapper: css`
     padding: 170px 0 100px;
+
+    ${commonCss.sectionMinHeight}
   `,
 
   skillCategoryList: css`

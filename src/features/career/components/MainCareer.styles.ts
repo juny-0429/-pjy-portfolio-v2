@@ -1,3 +1,4 @@
+import { commonCss } from '@/styles/common.styles';
 import { css } from '@emotion/react';
 
 export const mainCareerCss = {
@@ -7,5 +8,7 @@ export const mainCareerCss = {
     align-items: center;
     gap: 100px;
     padding: 74px 0 0;
+
+    ${commonCss.sectionMinHeight}
   `,
 };
