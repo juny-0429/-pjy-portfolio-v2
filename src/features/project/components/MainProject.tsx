@@ -12,7 +12,7 @@ export default function MainProject() {
         {projectList.map((project) => (
           <li key={project.title} css={mainProjectCss.projectWrapper}>
             <div css={mainProjectCss.mainImageWrapper}>
-              <Image src={project.mainImage} layout="fill" objectFit="cover" alt="project main image" />
+              <Image src={project.mainImage} fill objectFit="cover" alt="project main image" />
             </div>
 
             <div css={mainProjectCss.projectTab}>{project.team}</div>
