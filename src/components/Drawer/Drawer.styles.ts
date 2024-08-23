@@ -43,7 +43,7 @@ export const drawerCss = {
   drawer: css`
     position: fixed;
     z-index: 1000;
-    padding: 10px;
+    padding: 16px;
     box-sizing: border-box;
 
     background-color: white;
@@ -84,11 +84,6 @@ export const drawerCss = {
     right: 0;
     width: 24px;
     height: 24px;
-    padding: 0;
-    ${commonCss.pointer}
-
-    background: none;
-    border: none;
   `,
 
   drawerContent: css`
