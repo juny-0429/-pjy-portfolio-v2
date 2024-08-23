@@ -5,13 +5,12 @@ import Drawer from '../Drawer/Drawer';
 import { useState } from 'react';
 import { mainMenu } from '@/data/menu.data';
 import { MainMenu } from '@/types/menu.types';
+import { useRecoilState } from 'recoil';
+import { activeSectionState } from '@/atoms/sectionScroll';
 
-interface Props {
-  setActiveSection: (section: MainMenu) => void;
-}
-
-export default function MenuDrawer({ setActiveSection }: Props) {
+export default function MenuDrawer() {
   const [isOpen, setIsOpen] = useState(false);
+  const [_, setActiveSection] = useRecoilState<MainMenu>(activeSectionState);
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
