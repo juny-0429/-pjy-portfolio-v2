@@ -1,7 +1,7 @@
 import theme from '@/theme';
 import { css } from '@emotion/react';
 
-export const sideNavigationCss = {
+export const moreOptionMenuCss = {
   wrapper: css`
     position: fixed;
     bottom: 15px;
@@ -13,4 +13,6 @@ export const sideNavigationCss = {
 
     color: ${theme.colors.mainLightBlack};
   `,
+
+  moreOptionMenu: css``,
 };
