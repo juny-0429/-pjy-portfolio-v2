@@ -2,13 +2,12 @@ import { Link } from 'react-scroll';
 import { sidePaginationCss } from './SidePagination.styles';
 import { MainMenu } from '@/types/menu.types';
 import { mainMenu } from '@/data/menu.data';
+import { useRecoilState } from 'recoil';
+import { activeSectionState } from '@/atoms/sectionScroll';
 
-interface Props {
-  activeSection: MainMenu;
-  setActiveSection: (section: MainMenu) => void;
-}
+export default function SidePagination() {
+  const [activeSection, setActiveSection] = useRecoilState<MainMenu>(activeSectionState);
 
-export default function SidePagination({ activeSection, setActiveSection }: Props) {
   return (
     <div css={sidePaginationCss.wrapper}>
       {mainMenu.map((sectionName) => (
