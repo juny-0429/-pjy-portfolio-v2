@@ -18,14 +18,4 @@ export const headerCss = {
     font-size: 24px;
     font-weight: 900;
   `,
-
-  headerMenu: css`
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    width: 24px;
-    height: 24px;
-
-    color: ${theme.colors.mainLightBlack};
-  `,
 };

@@ -23,7 +23,7 @@ export const logoSliderCss = {
 
     &::before,
     &::after {
-      z-index: 100;
+      z-index: 10;
       position: absolute;
       content: '';
       width: 30px;
