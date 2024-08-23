@@ -1,3 +1,4 @@
+import { commonCss } from '@/styles/common.styles';
 import theme from '@/theme';
 import { css } from '@emotion/react';
 
@@ -7,7 +8,9 @@ export const mainConnectCss = {
     flex-direction: column;
     align-items: center;
     gap: 100px;
-    padding: 120px 0 300px;
+    padding: 120px 0;
+
+    ${commonCss.sectionMinHeight}
   `,
 
   description: css`

@@ -1,3 +1,4 @@
+import { commonCss } from '@/styles/common.styles';
 import theme from '@/theme';
 import { css, keyframes } from '@emotion/react';
 
@@ -20,6 +21,8 @@ export const mainHomeCss = {
     align-items: center;
     gap: 33px;
     padding: 60px 0;
+
+    ${commonCss.sectionMinHeight}
   `,
 
   homeHeader: css`

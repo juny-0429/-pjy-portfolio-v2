@@ -5,7 +5,7 @@ export const commonCss = {
   fullPage: css`
     /* header: 54px, footer: 105px */
     min-height: calc(100dvh - 54px - 105px);
-    padding: 0 34px;
+    padding: 0 44px;
 
     /* TODO: 다크 모드시 글자 색상 설정 하기  */
     color: ${theme.colors.mainLightBlack};
@@ -43,5 +43,9 @@ export const commonCss = {
 
   pointer: css`
     cursor: pointer;
+  `,
+
+  sectionMinHeight: css`
+    min-height: 100dvh;
   `,
 };
