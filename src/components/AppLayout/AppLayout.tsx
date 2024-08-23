@@ -11,7 +11,7 @@ export default function AppLayout({ children }: PropsWithChildren) {
 
   return (
     <>
-      <Header activeSection={activeSection} />
+      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
       <main css={commonCss.fullPage}>{children}</main>
       <SidePagination activeSection={activeSection} setActiveSection={setActiveSection} />
       <SideNavigation />

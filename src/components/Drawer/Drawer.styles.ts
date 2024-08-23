@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import { commonCss } from '@/styles/common.styles';
 import { css } from '@emotion/react';
 
 export const drawerDirectionCss = {
@@ -43,7 +42,12 @@ export const drawerCss = {
   drawer: css`
     position: fixed;
     z-index: 1000;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 16px;
     box-sizing: border-box;
 
     background-color: white;
@@ -70,7 +74,8 @@ export const drawerCss = {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 24px3;
+    width: 100%;
+    height: 24px;
   `,
 
   title: css`
@@ -84,17 +89,14 @@ export const drawerCss = {
     right: 0;
     width: 24px;
     height: 24px;
-    padding: 0;
-    ${commonCss.pointer}
-
-    background: none;
-    border: none;
   `,
 
   drawerContent: css`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 100%;
   `,
 };

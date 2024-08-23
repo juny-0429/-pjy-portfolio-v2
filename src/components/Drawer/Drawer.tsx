@@ -4,9 +4,9 @@ import { PropsWithChildren } from 'react';
 
 interface Props {
   title: string;
+  direction?: 'top' | 'bottom' | 'left' | 'right';
   isOpen: boolean;
   onToggle: () => void;
-  direction?: 'top' | 'bottom' | 'left' | 'right';
 }
 
 export default function Drawer({ title, isOpen, onToggle, direction = 'left', children }: PropsWithChildren<Props>) {
