@@ -1,28 +1,28 @@
 import { useEffect, useState } from 'react';
 
-type Theme = 'light' | 'dark';
+export type ThemeMode = 'light' | 'dark';
 
 export const useDarkMode = () => {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [themeMode, setThemeMode] = useState<ThemeMode>('light');
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme') as Theme | null;
+    const localThemeMode = window.localStorage.getItem('themeMode') as ThemeMode | null;
 
-    if (localTheme) {
-      setTheme(localTheme);
-      document.body.dataset.theme = localTheme;
+    if (localThemeMode) {
+      setThemeMode(localThemeMode);
+      document.body.dataset.themeMode = localThemeMode;
     } else {
-      setTheme('light');
-      document.body.dataset.theme = 'light';
+      setThemeMode('light');
+      document.body.dataset.themeMode = 'light';
     }
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    window.localStorage.setItem('theme', newTheme);
-    document.body.dataset.theme = newTheme;
+  const toggleThemeMode = () => {
+    const newThemeMode = themeMode === 'light' ? 'dark' : 'light';
+    setThemeMode(newThemeMode);
+    window.localStorage.setItem('themeMode', newThemeMode);
+    document.body.dataset.themeMode = newThemeMode;
   };
 
-  return { theme, toggleTheme };
+  return { themeMode, toggleThemeMode };
 };
