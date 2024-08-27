@@ -32,11 +32,13 @@ export default function MenuDrawer({ cssStyle }: Props) {
         <FeatherIcons.Menu css={menuDrawerCss.menuIcon} />
       </button>
       <Drawer title="section menu" direction="right" isOpen={isOpen} onToggle={toggleDrawer}>
-        {mainMenu.map((menu) => (
-          <Link key={menu} to={menu} spy={true} smooth={true} duration={500} css={menuDrawerCss.menuDrawerItem} onSetActive={() => handleMenuClick(menu)}>
-            {menu}
-          </Link>
-        ))}
+        <nav css={menuDrawerCss.menuList}>
+          {mainMenu.map((menu) => (
+            <Link key={menu} to={menu} spy={true} smooth={true} duration={500} css={menuDrawerCss.menuDrawerItem} onSetActive={() => handleMenuClick(menu)}>
+              {menu}
+            </Link>
+          ))}
+        </nav>
       </Drawer>
     </>
   );
