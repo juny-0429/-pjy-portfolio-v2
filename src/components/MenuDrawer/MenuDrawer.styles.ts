@@ -17,6 +17,14 @@ export const menuDrawerCss = {
     color: ${theme.colors.mainLightBlack};
   `,
 
+  menuList: css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  `,
+
   menuDrawerItem: css`
     display: flex;
     justify-content: center;

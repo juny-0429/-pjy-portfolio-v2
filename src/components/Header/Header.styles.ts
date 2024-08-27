@@ -12,10 +12,25 @@ export const headerCss = {
     padding: 15px 10px;
 
     background: ${theme.colors.white};
+
+    ${theme.media.pc} {
+      justify-content: space-between;
+      padding: 20px 40px;
+
+      border-bottom: 1px solid ${theme.colors.mainLightGreen};
+      box-shadow: 0px 1px 10px rgba(128, 128, 128, 0.5);
+    }
   `,
 
   headerTitle: css`
+    color: ${theme.colors.mainLightBlack};
     font-size: 24px;
     font-weight: 900;
+  `,
+
+  pcHeaderTitle: css`
+    color: ${theme.colors.mainLightBlack};
+    font-size: 40px;
+    font-weight: 300;
   `,
 };
