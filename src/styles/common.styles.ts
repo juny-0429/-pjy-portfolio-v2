@@ -40,6 +40,7 @@ export const commonCss = {
     ${theme.media.pc} {
       /* header: 82px */
       height: calc(100dvh - 82px);
+      padding: 0 100px;
 
       ${scrollbarCss.scrollbar}
     }

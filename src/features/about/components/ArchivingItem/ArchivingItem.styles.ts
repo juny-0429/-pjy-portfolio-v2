@@ -13,6 +13,11 @@ export const archivingItemCss = {
 
     border-radius: 10px;
     background: ${theme.colors.mainLightGray};
+
+    ${theme.media.pc} {
+      gap: 10px;
+      padding: 15px;
+    }
   `,
 
   titleWrapper: css`
@@ -20,17 +25,40 @@ export const archivingItemCss = {
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
+
+    ${theme.media.pc} {
+      gap: 10px;
+    }
+  `,
+
+  titleIcon: css`
+    width: 24px;
+    height: 24px;
+    color: ${theme.colors.mainLightBlack};
+
+    ${theme.media.pc} {
+      width: 30px;
+      height: 30px;
+    }
   `,
 
   title: css`
     font-size: 15px;
     font-weight: 600;
+
+    ${theme.media.pc} {
+      font-size: 24px;
+    }
   `,
 
   description: css`
     flex: 1;
     font-size: 12px;
     font-weight: 300;
+
+    ${theme.media.pc} {
+      font-size: 16px;
+    }
   `,
 
   linkList: css`
@@ -38,6 +66,10 @@ export const archivingItemCss = {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+
+    ${theme.media.pc} {
+      gap: 10px;
+    }
   `,
 
   linkItem: css`
@@ -49,5 +81,23 @@ export const archivingItemCss = {
     color: ${theme.colors.mainDeepBlue};
     font-size: 12px;
     font-weight: 600;
+
+    ${theme.media.pc} {
+      gap: 10px;
+
+      font-size: 16px;
+    }
+  `,
+
+  linkIcon: css`
+    width: 15px;
+    height: 15px;
+
+    ${theme.media.pc} {
+      width: 20px;
+      height: 20px;
+
+      stroke-width: 3px;
+    }
   `,
 };
