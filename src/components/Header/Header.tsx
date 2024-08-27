@@ -4,6 +4,7 @@ import MenuDrawer from '../MenuDrawer/MenuDrawer';
 import { useRecoilState } from 'recoil';
 import { activeSectionState } from '@/atoms/sectionScroll';
 import { commonCss } from '@/styles/common.styles';
+import HeaderMenu from '../HeaderMenu/HeaderMenu';
 
 export default function Header() {
   const [activeSection] = useRecoilState<MainMenu>(activeSectionState);
@@ -14,6 +15,7 @@ export default function Header() {
       <h1 css={[headerCss.pcHeaderTitle, commonCss.onlyPcVisibleBlock]}>JUNY PORTFOLIO</h1>
 
       <MenuDrawer cssStyle={commonCss.onlyMobileVisible} />
+      <HeaderMenu cssStyle={commonCss.onlyPcVisibleFlex} />
     </div>
   );
 }

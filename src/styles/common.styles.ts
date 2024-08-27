@@ -6,13 +6,14 @@ export const commonCss = {
     /* header: 54px, footer: 105px */
     min-height: calc(100dvh - 54px - 105px);
     padding: 0 44px;
+    overflow-x: hidden;
 
     /* TODO: 다크 모드시 글자 색상 설정 하기  */
     color: ${theme.colors.mainLightBlack};
 
     ${theme.media.pc} {
       /* header: 61px */
-      min-height: calc(100dvh - 61px);
+      min-height: calc(100dvh - 81px);
     }
   `,
 
@@ -60,6 +61,14 @@ export const commonCss = {
 
     ${theme.media.pc} {
       display: block;
+    }
+  `,
+
+  onlyPcVisibleFlex: css`
+    display: none;
+
+    ${theme.media.pc} {
+      display: flex;
     }
   `,
 };
