@@ -36,8 +36,6 @@ export const moreOptionMenuCss = {
   `,
 
   moreOptionMenu: css`
-    margin: 5px;
-
     ${theme.media.pc} {
       width: 30px;
       height: 30px;
@@ -50,12 +48,18 @@ export const moreOptionMenuCss = {
   `,
 
   optionsContainer: css`
+    position: absolute;
+    bottom: 40px;
+    right: 0;
     display: none;
     flex-direction: column;
-    position: absolute;
-    bottom: 100%;
-    right: 0;
+    gap: 20px;
     z-index: 10;
+
+    ${theme.media.pc} {
+      gap: 30px;
+      bottom: 50px;
+    }
   `,
 
   showOptions: css`
