@@ -1,3 +1,4 @@
+import theme from '@/theme';
 import { css, keyframes } from '@emotion/react';
 
 const slideUp = keyframes`
@@ -27,10 +28,25 @@ export const moreOptionMenuCss = {
     position: fixed;
     bottom: 15px;
     right: 10px;
+
+    ${theme.media.pc} {
+      bottom: 20px;
+      right: 20px;
+    }
   `,
 
   moreOptionMenu: css`
     margin: 5px;
+
+    ${theme.media.pc} {
+      width: 30px;
+      height: 30px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
   `,
 
   optionsContainer: css`
