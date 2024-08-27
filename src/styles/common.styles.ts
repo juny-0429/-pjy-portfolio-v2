@@ -1,22 +1,7 @@
 import theme from '@/theme';
 import { css } from '@emotion/react';
 
-export const commonCss = {
-  fullPage: css`
-    /* header: 54px, footer: 105px */
-    min-height: calc(100dvh - 54px - 105px);
-    padding: 0 44px;
-    overflow-x: hidden;
-
-    /* TODO: 다크 모드시 글자 색상 설정 하기  */
-    color: ${theme.colors.mainLightBlack};
-
-    ${theme.media.pc} {
-      /* header: 61px */
-      min-height: calc(100dvh - 81px);
-    }
-  `,
-
+export const scrollbarCss = {
   noScroll: css`
     ::-webkit-scrollbar {
       display: none;
@@ -25,8 +10,38 @@ export const commonCss = {
 
   scrollbar: css`
     &::-webkit-scrollbar {
+      display: block;
+      width: 10px;
+      height: 10px;
+
+      background: transparent;
     }
     &::-webkit-scrollbar-thumb {
+      background: ${theme.colors.mainLightGreen};
+      border-radius: 99px;
+      background-clip: padding-box;
+      border: 2px solid transparent;
+    }
+  `,
+};
+
+export const commonCss = {
+  fullPage: css`
+    /* header: 54px */
+    height: calc(100dvh - 54px);
+    padding: 0 44px;
+    overflow-x: hidden;
+
+    /* TODO: 다크 모드시 글자 색상 설정 하기  */
+    color: ${theme.colors.mainLightBlack};
+
+    ${scrollbarCss.noScroll}
+
+    ${theme.media.pc} {
+      /* header: 82px */
+      height: calc(100dvh - 82px);
+
+      ${scrollbarCss.scrollbar}
     }
   `,
 
