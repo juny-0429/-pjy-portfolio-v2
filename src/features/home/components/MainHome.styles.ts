@@ -53,8 +53,9 @@ export const mainHomeCss = {
 
     ${theme.media.pc} {
       color: ${theme.colors.mainLightBlack};
-      font-size: 100px;
+      font-size: 120px;
       font-weight: 800;
+      letter-spacing: 10px;
 
       border-bottom: 0px;
     }
@@ -65,7 +66,8 @@ export const mainHomeCss = {
     font-weight: 800;
 
     ${theme.media.pc} {
-      font-size: 100px;
+      font-size: 120px;
+      letter-spacing: 10px;
     }
   `,
 
