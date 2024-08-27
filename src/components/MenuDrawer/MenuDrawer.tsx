@@ -7,8 +7,13 @@ import { mainMenu } from '@/data/menu.data';
 import { MainMenu } from '@/types/menu.types';
 import { useRecoilState } from 'recoil';
 import { activeSectionState } from '@/atoms/sectionScroll';
+import { Interpolation, Theme } from '@emotion/react';
 
-export default function MenuDrawer() {
+interface Props {
+  cssStyle?: Interpolation<Theme>;
+}
+
+export default function MenuDrawer({ cssStyle }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [_, setActiveSection] = useRecoilState<MainMenu>(activeSectionState);
 
@@ -23,7 +28,7 @@ export default function MenuDrawer() {
 
   return (
     <>
-      <button type="button" css={menuDrawerCss.menuButton} onClick={toggleDrawer}>
+      <button type="button" css={[menuDrawerCss.menuButton, cssStyle]} onClick={toggleDrawer}>
         <FeatherIcons.Menu css={menuDrawerCss.menuIcon} />
       </button>
       <Drawer title="section menu" direction="right" isOpen={isOpen} onToggle={toggleDrawer}>
