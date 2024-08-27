@@ -121,5 +121,9 @@ export const mainHomeCss = {
     height: 30px;
     color: ${theme.colors.mainGray};
     animation: ${bounce} 1.5s infinite;
+
+    ${theme.media.pc} {
+      bottom: 20px;
+    }
   `,
 };

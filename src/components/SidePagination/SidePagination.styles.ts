@@ -12,6 +12,7 @@ export const sidePaginationCss = {
     gap: 5px;
 
     ${theme.media.pc} {
+      right: 20px;
       gap: 8px;
     }
   `,
