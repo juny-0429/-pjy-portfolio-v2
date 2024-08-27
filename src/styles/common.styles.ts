@@ -48,4 +48,18 @@ export const commonCss = {
   sectionMinHeight: css`
     min-height: 100dvh;
   `,
+
+  onlyMobileVisible: css`
+    ${theme.media.pc} {
+      display: none;
+    }
+  `,
+
+  onlyPcVisibleBlock: css`
+    display: none;
+
+    ${theme.media.pc} {
+      display: block;
+    }
+  `,
 };
