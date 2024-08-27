@@ -10,6 +10,10 @@ export const sidePaginationCss = {
     flex-direction: column;
     align-items: flex-end;
     gap: 5px;
+
+    ${theme.media.pc} {
+      gap: 8px;
+    }
   `,
 
   paginationLine: css`
@@ -18,10 +22,19 @@ export const sidePaginationCss = {
 
     border-radius: 99px;
     background: ${theme.colors.mainLightGray};
+
+    ${theme.media.pc} {
+      width: 20px;
+      height: 2px;
+    }
   `,
 
   activeLine: css`
     width: 20px;
     background: ${theme.colors.mainBlue};
+
+    ${theme.media.pc} {
+      width: 30px;
+    }
   `,
 };
