@@ -1,4 +1,3 @@
-import theme from '@/theme';
 import { ArchivingItemType } from '../../data/archiving.data';
 import { archivingItemCss } from './ArchivingItem.styles';
 import FeatherIcons from '@/theme/featherIcons';
