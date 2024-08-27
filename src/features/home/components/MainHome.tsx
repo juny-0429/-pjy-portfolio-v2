@@ -20,7 +20,7 @@ export default function MainHome() {
           작성하기 위해 노력하고 있습니다.
         </p>
 
-        <Image src={PjyProfileImage.src} css={mainHomeCss.profileImage} width={200} height={300} alt="pjy profile image" />
+        <Image src={PjyProfileImage.src} css={mainHomeCss.profileImage} priority width={200} height={300} alt="pjy profile image" />
       </div>
 
       <FeatherIcons.ChevronDown css={mainHomeCss.downArrow} />
