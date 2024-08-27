@@ -47,7 +47,11 @@ export const commonCss = {
   `,
 
   sectionMinHeight: css`
-    min-height: 100dvh;
+    min-height: calc(100dvh - 54px);
+
+    ${theme.media.pc} {
+      min-height: calc(100dvh - 81px);
+    }
   `,
 
   onlyMobileVisible: css`
