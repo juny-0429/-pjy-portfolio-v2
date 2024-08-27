@@ -11,7 +11,7 @@ export default function ArchivingItem({ archivingItem }: Props) {
   return (
     <div css={archivingItemCss.wrapper}>
       <div css={archivingItemCss.titleWrapper}>
-        <archivingItem.icon width={24} height={24} color={theme.colors.mainLightBlack} />
+        <archivingItem.icon css={archivingItemCss.titleIcon} />
         <p css={archivingItemCss.title}>{archivingItem.title}</p>
       </div>
 
@@ -20,7 +20,7 @@ export default function ArchivingItem({ archivingItem }: Props) {
       <div css={archivingItemCss.linkList}>
         {archivingItem.linkList.map((item, index) => (
           <a href={item.url} target="_blank" rel="noopener noreferrer" key={index} css={archivingItemCss.linkItem}>
-            <FeatherIcons.Link width={15} height={15} />
+            <FeatherIcons.Link css={archivingItemCss.linkIcon} />
             {item.label}
           </a>
         ))}
