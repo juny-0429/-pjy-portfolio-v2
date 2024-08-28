@@ -20,12 +20,14 @@ export default function MainSkills() {
             <div key={index} css={[mainSkillsCss.skillCategoryWrapper, colorStyle]}>
               <p css={[mainSkillsCss.skillCategoryTitle, { color: colorStyle.color }]}>{item.category}</p>
 
-              {item.skills.map((skill, skillIndex) => (
-                <div key={skillIndex} css={mainSkillsCss.skillWrapper}>
-                  <p css={mainSkillsCss.skillLabel}>{skill.label}</p>
-                  <p css={mainSkillsCss.skillDescription}>{skill.description}</p>
-                </div>
-              ))}
+              <div css={mainSkillsCss.skillList}>
+                {item.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} css={mainSkillsCss.skillWrapper}>
+                    <p css={mainSkillsCss.skillLabel}>{skill.label}</p>
+                    <p css={mainSkillsCss.skillDescription}>{skill.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           );
         })}

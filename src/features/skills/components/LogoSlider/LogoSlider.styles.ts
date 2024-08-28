@@ -12,6 +12,10 @@ transform: translateX(0);
 export const logoSliderCss = {
   logoList: css`
     padding: 0 0 100px;
+
+    ${theme.media.pc} {
+      padding: 0 0 50px;
+    }
   `,
 
   logos: css`
