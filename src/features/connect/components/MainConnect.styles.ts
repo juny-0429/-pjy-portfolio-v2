@@ -13,6 +13,21 @@ export const mainConnectCss = {
     ${commonCss.sectionMinHeight}
   `,
 
+  titleWrapper: css`
+    ${theme.media.pc} {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  `,
+
+  title: css`
+    color: ${theme.colors.mainOrange};
+    font-size: 40px;
+    font-weight: 800;
+  `,
+
   description: css`
     color: ${theme.colors.mainGray};
     font-size: 24px;
@@ -32,6 +47,10 @@ export const mainConnectCss = {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    ${theme.media.pc} {
+      width: 40%;
+    }
   `,
 
   connectItemLabel: css`
@@ -44,11 +63,30 @@ export const mainConnectCss = {
       font-size: 20px;
       font-weight: 500;
     }
+
+    ${theme.media.pc} {
+      gap: 20px;
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+
+      p {
+        font-size: 25px;
+      }
+    }
   `,
 
   copyIcon: css`
     color: ${theme.colors.mainGray};
     width: 20px;
     height: 20px;
+
+    ${theme.media.pc} {
+      width: 25px;
+      height: 25px;
+      ${commonCss.hoverBounce}
+    }
   `,
 };
