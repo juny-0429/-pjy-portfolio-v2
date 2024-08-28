@@ -1,3 +1,4 @@
+import theme from '@/theme';
 import { css, keyframes } from '@emotion/react';
 
 const slideLeftAnimation = keyframes`
@@ -11,6 +12,10 @@ transform: translateX(0);
 export const logoSliderCss = {
   logoList: css`
     padding: 0 0 100px;
+
+    ${theme.media.pc} {
+      padding: 0 0 50px;
+    }
   `,
 
   logos: css`
@@ -39,10 +44,33 @@ export const logoSliderCss = {
       right: 0;
       background: linear-gradient(to left, #fff 0%, #fff0 100%);
     }
+
+    ${theme.media.pc} {
+      left: -100px;
+
+      &::before,
+      &::after {
+        width: 50px;
+      }
+    }
   `,
 
   logoSlide: css`
     display: inline-block;
     animation: ${slideLeftAnimation} 10s linear infinite;
+  `,
+
+  logo: css`
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 50px;
+
+    ${theme.media.pc} {
+      width: 50px;
+      height: 50px;
+      margin-left: 100px;
+    }
   `,
 };
