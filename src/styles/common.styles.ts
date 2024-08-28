@@ -27,22 +27,19 @@ export const scrollbarCss = {
 
 export const commonCss = {
   fullPage: css`
-    /* header: 54px */
-    height: calc(100dvh - 54px);
+    min-height: calc(100dvh - 54px - 105px);
     padding: 0 44px;
     overflow-x: hidden;
+    overflow-y: auto;
+
+    ${scrollbarCss.noScroll}
 
     /* TODO: 다크 모드시 글자 색상 설정 하기  */
     color: ${theme.colors.mainLightBlack};
 
-    ${scrollbarCss.noScroll}
-
     ${theme.media.pc} {
-      /* header: 82px */
-      height: calc(100dvh - 82px);
+      min-height: calc(100dvh - 82px - 105px);
       padding: 0 100px;
-
-      ${scrollbarCss.scrollbar}
     }
   `,
 
