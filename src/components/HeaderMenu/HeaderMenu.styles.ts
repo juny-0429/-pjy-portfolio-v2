@@ -16,10 +16,7 @@ export const headerMenuCss = {
     color: ${theme.colors.mainLightBlack};
     font-size: 24px;
     font-weight: 600;
-
-    &:hover {
-      color: ${theme.colors.mainGreen};
-    }
+    ${commonCss.hoverBounce}
   `,
 
   activeItem: css`

@@ -88,4 +88,14 @@ export const commonCss = {
       display: flex;
     }
   `,
+
+  hoverBounce: css`
+    &:hover {
+      color: ${theme.colors.mainGreen};
+      transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+      transform: scale(1.2);
+    }
+  `,
 };
