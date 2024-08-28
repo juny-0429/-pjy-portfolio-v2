@@ -22,6 +22,10 @@ export default function Home() {
           html,
           body {
             font-family: ${pretendard.style.fontFamily};
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
           }
         `}
       </style>
