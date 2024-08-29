@@ -25,9 +25,16 @@ export const mainCareerCss = {
   `,
 
   careerList: css`
-    position: relative;
-    width: 100%;
-    height: calc(100dvh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 100px;
+
+    ${theme.media.pc} {
+      position: relative;
+      width: 100%;
+      height: calc(100dvh - 100px);
+    }
   `,
 };
 
