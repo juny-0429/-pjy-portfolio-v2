@@ -32,9 +32,21 @@ export const mainCareerCss = {
 
     ${theme.media.pc} {
       position: relative;
+
       width: 100%;
       height: calc(100dvh - 100px);
     }
+  `,
+
+  careers: css`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(15, 1fr);
+    grid-gap: 140px;
+    row-gap: 80px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
   `,
 };
 
