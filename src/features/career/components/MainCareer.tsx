@@ -4,7 +4,7 @@ import { mainCareerCss, progressBarCss } from './MainCareer.styles';
 import { commonCss } from '@/styles/common.styles';
 import { motion, useMotionValueEvent, useScroll, useSpring, useTransform } from 'framer-motion';
 import PcCareerItem from './PcCareerItem/PcCareerItem';
-import { careerList } from '../data/\bcareer.data';
+import { careerList } from '../data/career.data';
 import theme from '@/theme';
 
 export default function MainCareer() {
