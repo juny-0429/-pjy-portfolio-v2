@@ -22,7 +22,7 @@ export default function PcProjectList() {
         disableOnInteraction: false,
         pauseOnMouseEnter: true, // 마우스를 올리면 애니메이션 멈춤
       }}
-      spaceBetween={100}
+      spaceBetween={200}
       slidesPerView={3}
       loop={true}
       centeredSlides={true}
