@@ -92,6 +92,8 @@ export const commonCss = {
   hoverBounce: css`
     &:hover {
       color: ${theme.colors.mainGreen};
+      stroke: ${theme.colors.mainGreen};
+
       transition:
         color 0.3s ease,
         transform 0.3s ease;
