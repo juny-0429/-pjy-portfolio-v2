@@ -9,7 +9,7 @@ import TheTechTitanLogo from '@/assets/images/project/the-titan-logo.png';
 import SmileInvestMain from '@/assets/images/project/smile-invest.png';
 import SmileInvestLogo from '@/assets/images/project/smile-invest-logo.png';
 
-export const projectList = [
+export const projectListData = [
   {
     title: '[임시 중단] Cocktable(칵테일 테이블오더 앱)',
     mainImage: CocktableMain,
