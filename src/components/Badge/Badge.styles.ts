@@ -38,7 +38,7 @@ export const badgeSize = {
 
   45: css`
     height: 45px;
-    padding: 10px 30px;
+    padding: 5px 30px;
 
     font-size: 20px;
     font-weight: 500;

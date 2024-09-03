@@ -11,6 +11,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 export default function PcProjectList() {
   return (
@@ -29,31 +30,33 @@ export default function PcProjectList() {
       css={[pcProjectCss.swiperContainer, commonCss.onlyPcVisibleFlex]}
     >
       {projectListData.map((project) => (
-        <SwiperSlide key={project.title}>
-          <div css={pcProjectCss.projectWrapper}>
-            <div css={pcProjectCss.mainImageWrapper}>
-              <Image src={project.mainImage} fill alt="project main image" style={{ objectFit: 'cover' }} />
-            </div>
+        <SwiperSlide key={project.id}>
+          <Link href={`/project/${project.id}`}>
+            <div css={pcProjectCss.projectWrapper}>
+              <div css={pcProjectCss.mainImageWrapper}>
+                <Image src={project.mainImage} fill alt="project main image" style={{ objectFit: 'cover' }} />
+              </div>
 
-            <div css={pcProjectCss.projectTab}>{project.team}</div>
+              <div css={pcProjectCss.projectTab}>{project.team}</div>
 
-            <div css={pcProjectCss.titleWrapper}>
-              {project.logo && (
-                <div css={pcProjectCss.projectLogoWrapper}>
-                  <Image src={project.logo} fill alt="project logo" />
-                </div>
-              )}
-              <p css={pcProjectCss.projectTitle}>{project.title}</p>
-            </div>
+              <div css={pcProjectCss.titleWrapper}>
+                {project.logo && (
+                  <div css={pcProjectCss.projectLogoWrapper}>
+                    <Image src={project.logo} fill alt="project logo" />
+                  </div>
+                )}
+                <p css={pcProjectCss.projectTitle}>{project.title}</p>
+              </div>
 
-            <div css={pcProjectCss.skillList}>
-              {project.skills.map((skill, index) => (
-                <Badge key={index} color={skillColorMap[skill as SkillType]} type="capsule" fillStyle="fill" cssStyle={sizes.badgeSize[14]}>
-                  {skill}
-                </Badge>
-              ))}
+              <div css={pcProjectCss.skillList}>
+                {project.skills.map((skill, index) => (
+                  <Badge key={index} color={skillColorMap[skill as SkillType]} type="capsule" fillStyle="fill" cssStyle={sizes.badgeSize[14]}>
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
             </div>
-          </div>
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
