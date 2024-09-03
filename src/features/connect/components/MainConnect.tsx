@@ -24,27 +24,27 @@ export default function MainConnect() {
         <p css={mainConnectCss.description}>프론트엔드 개발자로서 최신 트렌드를 반영하며, 사용자 중심의 웹을 구현하고자 합니다.</p>
       </div>
 
-      <div css={mainConnectCss.connectWrapper}>
+      <ul css={mainConnectCss.connectWrapper}>
         {/* copy phone */}
-        <div css={mainConnectCss.connectItem}>
+        <li css={mainConnectCss.connectItem}>
           <div css={mainConnectCss.connectItemLabel}>
             <FeatherIcons.Phone />
             <p>{INFORMATION.PHONE_NUMBER}</p>
           </div>
           <FeatherIcons.Copy css={mainConnectCss.copyIcon} onClick={() => handleCopyClick(INFORMATION.PHONE_NUMBER)} />
-        </div>
+        </li>
 
         {/* copy mail */}
-        <div css={mainConnectCss.connectItem}>
+        <li css={mainConnectCss.connectItem}>
           <div css={mainConnectCss.connectItemLabel}>
             <FeatherIcons.Mail />
             <p>{INFORMATION.EMAIL}</p>
           </div>
           <FeatherIcons.Copy css={mainConnectCss.copyIcon} onClick={() => handleCopyClick(INFORMATION.EMAIL)} />
-        </div>
+        </li>
 
         <ConnectIconList />
-      </div>
+      </ul>
     </div>
   );
 }

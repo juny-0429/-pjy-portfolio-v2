@@ -31,13 +31,16 @@ export default function MenuDrawer({ cssStyle }: Props) {
       <button type="button" css={[menuDrawerCss.menuButton, cssStyle]} onClick={toggleDrawer}>
         <FeatherIcons.Menu css={menuDrawerCss.menuIcon} />
       </button>
+
       <Drawer title="section menu" direction="right" isOpen={isOpen} onToggle={toggleDrawer}>
-        <nav css={menuDrawerCss.menuList}>
-          {mainMenu.map((menu) => (
-            <Link key={menu} to={menu} spy={true} smooth={true} duration={500} css={menuDrawerCss.menuDrawerItem} onSetActive={() => handleMenuClick(menu)}>
-              {menu}
-            </Link>
-          ))}
+        <nav style={{ width: '100%' }}>
+          <ul css={menuDrawerCss.menuList}>
+            {mainMenu.map((menu) => (
+              <Link key={menu} to={menu} spy={true} smooth={true} duration={500} css={menuDrawerCss.menuDrawerItem} onSetActive={() => handleMenuClick(menu)}>
+                <li>{menu}</li>
+              </Link>
+            ))}
+          </ul>
         </nav>
       </Drawer>
     </>

@@ -10,12 +10,12 @@ export default function Header() {
   const [activeSection] = useRecoilState<MainMenu>(activeSectionState);
 
   return (
-    <div css={headerCss.header}>
+    <header css={headerCss.header}>
       <h1 css={[headerCss.headerTitle, commonCss.onlyMobileVisible]}>{activeSection}</h1>
       <h1 css={[headerCss.pcHeaderTitle, commonCss.onlyPcVisibleBlock]}>JUNY PORTFOLIO</h1>
 
       <MenuDrawer cssStyle={commonCss.onlyMobileVisible} />
       <HeaderMenu cssStyle={commonCss.onlyPcVisibleFlex} />
-    </div>
+    </header>
   );
 }
