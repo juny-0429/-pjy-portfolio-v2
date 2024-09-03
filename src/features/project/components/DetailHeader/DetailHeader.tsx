@@ -11,7 +11,7 @@ interface Props {
 
 export default function DetailHeader({ date, title, linkList }: Props) {
   return (
-    <div css={detailHeaderCss.header}>
+    <header css={detailHeaderCss.header}>
       <Link href="/" css={detailHeaderCss.backIconWrapper}>
         <FeatherIcons.ChevronLeft width={50} height={50} color={theme.colors.mainLightBlack} />
       </Link>
@@ -28,6 +28,6 @@ export default function DetailHeader({ date, title, linkList }: Props) {
           </Link>
         ))}
       </div>
-    </div>
+    </header>
   );
 }
