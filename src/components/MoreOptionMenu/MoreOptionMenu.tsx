@@ -18,7 +18,7 @@ export default function MoreOptionMenu() {
   };
 
   return (
-    <div css={moreOptionMenuCss.wrapper}>
+    <nav css={moreOptionMenuCss.wrapper}>
       {/* More 버튼 */}
       <button type="button" css={moreOptionMenuCss.moreOptionMenu} onClick={onMoreToggle}>
         <FeatherIcons.MoreVertical />
@@ -43,6 +43,6 @@ export default function MoreOptionMenu() {
           <FeatherIcons.ChevronsUp />
         </button>
       </div>
-    </div>
+    </nav>
   );
 }

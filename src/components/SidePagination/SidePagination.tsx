@@ -9,12 +9,14 @@ export default function SidePagination() {
   const [activeSection, setActiveSection] = useRecoilState<MainMenu>(activeSectionState);
 
   return (
-    <div css={sidePaginationCss.wrapper}>
-      {mainMenu.map((sectionName) => (
-        <Link key={sectionName} to={sectionName} spy={true} smooth={true} duration={500} onSetActive={() => setActiveSection(sectionName)}>
-          <div css={[sidePaginationCss.paginationLine, activeSection === sectionName && sidePaginationCss.activeLine]} />
-        </Link>
-      ))}
-    </div>
+    <nav>
+      <ul css={sidePaginationCss.wrapper}>
+        {mainMenu.map((sectionName) => (
+          <Link key={sectionName} to={sectionName} spy={true} smooth={true} duration={500} onSetActive={() => setActiveSection(sectionName)}>
+            <li css={[sidePaginationCss.paginationLine, activeSection === sectionName && sidePaginationCss.activeLine]} />
+          </Link>
+        ))}
+      </ul>
+    </nav>
   );
 }

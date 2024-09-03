@@ -21,13 +21,17 @@ export default function DetailHeader({ date, title, linkList }: Props) {
         <p css={detailHeaderCss.title}>{title}</p>
       </div>
 
-      <div css={detailHeaderCss.projectLinkList}>
-        {linkList.map((link, index) => (
-          <Link key={index} href={link.url} target="_blank" rel="noopener noreferrer">
-            <link.LinkIcon width={50} height={50} color={theme.colors.mainLightBlack} />
-          </Link>
-        ))}
-      </div>
+      <nav>
+        <ul css={detailHeaderCss.projectLinkList}>
+          {linkList.map((link, index) => (
+            <li key={index}>
+              <Link href={link.url} target="_blank" rel="noopener noreferrer">
+                <link.LinkIcon width={50} height={50} color={theme.colors.mainLightBlack} />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }
