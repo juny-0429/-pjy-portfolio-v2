@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { detailHeaderCss } from './DetailHeader.styles';
+import { projectHeaderCss } from './ProjectHeader.styles';
 import theme from '@/theme';
 import FeatherIcons from '@/theme/featherIcons';
 
@@ -9,20 +9,20 @@ interface Props {
   linkList: { LinkIcon: React.FC<React.SVGProps<SVGSVGElement>>; url: string }[];
 }
 
-export default function DetailHeader({ date, title, linkList }: Props) {
+export default function ProjectHeader({ date, title, linkList }: Props) {
   return (
-    <header css={detailHeaderCss.header}>
-      <Link href="/" css={detailHeaderCss.backIconWrapper}>
+    <header css={projectHeaderCss.header}>
+      <Link href="/" css={projectHeaderCss.backIconWrapper}>
         <FeatherIcons.ChevronLeft width={50} height={50} color={theme.colors.mainLightBlack} />
       </Link>
 
-      <div css={detailHeaderCss.titleWrapper}>
-        <p css={detailHeaderCss.date}>{date}</p>
-        <p css={detailHeaderCss.title}>{title}</p>
+      <div css={projectHeaderCss.titleWrapper}>
+        <p css={projectHeaderCss.date}>{date}</p>
+        <p css={projectHeaderCss.title}>{title}</p>
       </div>
 
       <nav>
-        <ul css={detailHeaderCss.projectLinkList}>
+        <ul css={projectHeaderCss.projectLinkList}>
           {linkList.map((link, index) => (
             <li key={index}>
               <Link href={link.url} target="_blank" rel="noopener noreferrer">

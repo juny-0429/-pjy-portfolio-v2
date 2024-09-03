@@ -1,4 +1,4 @@
-import AppLayout from '@/components/AppLayout/AppLayout';
+import AppLayout from '@/components/Layout/AppLayout/AppLayout';
 import useCheckPage from '@/hooks/useCheckPage';
 import '@/styles/globals.css';
 import theme from '@/theme';

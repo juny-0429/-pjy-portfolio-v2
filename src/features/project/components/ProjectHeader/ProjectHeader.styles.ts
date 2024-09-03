@@ -2,7 +2,7 @@ import { commonCss } from '@/styles/common.styles';
 import theme from '@/theme';
 import { css } from '@emotion/react';
 
-export const detailHeaderCss = {
+export const projectHeaderCss = {
   header: css`
     position: sticky;
     top: 0;

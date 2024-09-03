@@ -7,10 +7,11 @@ import Image from 'next/image';
 import Badge from '@/components/Badge/Badge';
 import { skillColorMap, SkillType } from '@/features/skills/data/skillColorMap.data';
 import sizes from '@/theme/sizes';
-import DetailHeader from '../DetailHeader/DetailHeader';
+import DetailHeader from '../ProjectHeader/ProjectHeader';
 import { quickMenuList } from '../../data/projectDetail.data';
 import QuickMenu from '../QuickMenu/QuickMenu';
 import { Element } from 'react-scroll';
+import Footer from '@/components/Footer/Footer';
 
 export default function ProjectDetail() {
   const router = useRouter();
@@ -83,6 +84,8 @@ export default function ProjectDetail() {
         {/* Quick Menu */}
         <QuickMenu />
       </div>
+
+      <Footer />
     </div>
   );
 }
