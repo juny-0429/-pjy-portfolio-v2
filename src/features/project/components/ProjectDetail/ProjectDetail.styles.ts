@@ -4,27 +4,32 @@ import { css } from '@emotion/react';
 
 export const projectDetailCss = {
   wrapper: css`
-    width: 100dvw;
+    width: 100%;
     height: 100dvh;
-    overflow-x: hidden;
-
-    ${scrollbarCss.noScroll}
   `,
 
   contentWrapper: css`
     position: relative;
     display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    padding: 50px 100px;
+  `,
+
+  content: css`
+    position: relative;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 50px;
-    padding: 0 300px;
-    box-sizing: border-box;
   `,
 
   projectImageWrapper: css`
     position: relative;
     width: 100%;
     height: 450px;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   `,
 
   infoWrapper: css`
@@ -77,8 +82,8 @@ export const projectDetailCss = {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 100px;
-    padding: 0 0 200px;
+    gap: 150px;
+    padding: 0 0 500px;
   `,
 
   section: css`
