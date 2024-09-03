@@ -1,3 +1,5 @@
+import { ProjectDetailMenu } from '@/types/menu.types';
+
 interface ProjectDetail {
   프로젝트소개: string;
   프로젝트목적: string;
@@ -18,10 +20,10 @@ export const project: { detail: ProjectDetail } = {
   },
 };
 
-export const sections = [
-  { title: '프로젝트 목적', key: '프로젝트목적' },
-  { title: '나의 역할', key: '나의역할' },
-  { title: '고충', key: '고충' },
-  { title: '회고', key: '회고' },
-  { title: '동작 구현', key: '동작구현' },
+export const quickMenuList: { label: string; value: ProjectDetailMenu }[] = [
+  { label: '프로젝트 목적', value: '프로젝트목적' },
+  { label: '나의 역할', value: '나의역할' },
+  { label: '고충', value: '고충' },
+  { label: '회고', value: '회고' },
+  { label: '동작 구현', value: '동작구현' },
 ];
