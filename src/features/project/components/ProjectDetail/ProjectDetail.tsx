@@ -30,54 +30,58 @@ export default function ProjectDetail() {
       <div css={projectDetailCss.contentWrapper}>
         {/* content */}
         <div css={projectDetailCss.content}>
-          {/* main Image */}
-          <div css={projectDetailCss.projectImageWrapper}>
-            <Image src={project.mainImage} fill alt="project main images" />
-          </div>
-
-          {/* 스킬 */}
-          <div css={projectDetailCss.infoWrapper}>
-            <p css={projectDetailCss.infoTitle}>스킬</p>
-
-            <div css={projectDetailCss.skillList}>
-              {project.skills.map((skill, index) => (
-                <Badge key={index} color={skillColorMap[skill as SkillType]} type="rounded" fillStyle="fill" cssStyle={sizes.badgeSize[45]}>
-                  {skill}
-                </Badge>
-              ))}
+          <Element name="프로젝트정보" css={projectDetailCss.content}>
+            {/* main Image */}
+            <div css={projectDetailCss.projectImageWrapper}>
+              <Image src={project.mainImage} fill alt="project main images" />
             </div>
-          </div>
 
-          {/* 인원 */}
-          <div css={projectDetailCss.infoWrapper}>
-            <p css={projectDetailCss.infoTitle}>인원</p>
-            <div css={projectDetailCss.memberWrapper}>
-              <p css={projectDetailCss.member}>{project.Member}</p>
-              <FeatherIcons.Users width={40} height={40} color={theme.colors.mainLightBlack} />
+            {/* 스킬 */}
+            <div css={projectDetailCss.infoWrapper}>
+              <p css={projectDetailCss.infoTitle}>스킬</p>
+
+              <div css={projectDetailCss.skillList}>
+                {project.skills.map((skill, index) => (
+                  <Badge key={index} color={skillColorMap[skill as SkillType]} type="rounded" fillStyle="fill" cssStyle={sizes.badgeSize[45]}>
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* 프로젝트 소개 */}
-          <div css={projectDetailCss.infoWrapper}>
-            <p css={projectDetailCss.infoTitle}>프로젝트 소개</p>
-            <p css={projectDetailCss.description}>{project.description}</p>
-          </div>
+            {/* 인원 */}
+            <div css={projectDetailCss.infoWrapper}>
+              <p css={projectDetailCss.infoTitle}>인원</p>
+              <div css={projectDetailCss.memberWrapper}>
+                <p css={projectDetailCss.member}>{project.Member}</p>
+                <FeatherIcons.Users width={40} height={40} color={theme.colors.mainLightBlack} />
+              </div>
+            </div>
+
+            {/* 프로젝트 소개 */}
+            <div css={projectDetailCss.infoWrapper}>
+              <p css={projectDetailCss.infoTitle}>프로젝트 소개</p>
+              <p css={projectDetailCss.description}>{project.description}</p>
+            </div>
+          </Element>
 
           <div css={projectDetailCss.divider} />
 
           {/* 프로젝트 내용 */}
           <div css={projectDetailCss.detail}>
-            {quickMenuList.map((menu) => (
-              <Element name={menu.value as string} key={menu.value}>
-                <div css={projectDetailCss.section}>
-                  <div css={projectDetailCss.titleWrapper}>
-                    <FeatherIcons.Triangle css={projectDetailCss.titleIcon} />
-                    <p css={projectDetailCss.detailSectionTitle}>{menu.label}</p>
+            {quickMenuList
+              .filter((menu) => menu.value !== '프로젝트정보')
+              .map((menu) => (
+                <Element name={menu.value as string} key={menu.value}>
+                  <div css={projectDetailCss.section}>
+                    <div css={projectDetailCss.titleWrapper}>
+                      <FeatherIcons.Triangle css={projectDetailCss.titleIcon} />
+                      <p css={projectDetailCss.detailSectionTitle}>{menu.label}</p>
+                    </div>
+                    <p css={projectDetailCss.detailSectionContent}>{project.detail[menu.value as keyof typeof project.detail]}</p>
                   </div>
-                  <p css={projectDetailCss.detailSectionContent}> {project.detail[menu.value as keyof typeof project.detail]}</p>
-                </div>
-              </Element>
-            ))}
+                </Element>
+              ))}
           </div>
         </div>
 
