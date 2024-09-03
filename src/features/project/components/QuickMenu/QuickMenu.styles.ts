@@ -1,11 +1,11 @@
+import { commonCss } from '@/styles/common.styles';
 import theme from '@/theme';
 import { css } from '@emotion/react';
 
 export const quickMenuCss = {
   wrapper: css`
     position: sticky;
-    top: 180px;
-    right: -100px;
+    top: 130px;
     z-index: 100;
     flex-shrink: 0;
     width: 160px;
@@ -17,11 +17,13 @@ export const quickMenuCss = {
   `,
 
   menu: css`
+    ${commonCss.pointer}
+
     padding: 8px 20px;
     border-left: 1px solid ${theme.colors.mainLightGray};
 
     color: ${theme.colors.mainLightGray};
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 400;
 
     :hover {

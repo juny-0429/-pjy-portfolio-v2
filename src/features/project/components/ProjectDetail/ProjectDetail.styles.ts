@@ -1,11 +1,11 @@
-import { commonCss, scrollbarCss } from '@/styles/common.styles';
+import { scrollbarCss } from '@/styles/common.styles';
 import theme from '@/theme';
 import { css } from '@emotion/react';
 
 export const projectDetailCss = {
   wrapper: css`
     width: 100%;
-    height: 100dvh;
+    height: 1193px;
   `,
 
   contentWrapper: css`
@@ -13,7 +13,7 @@ export const projectDetailCss = {
     display: flex;
     align-items: flex-start;
     gap: 100px;
-    padding: 50px 100px;
+    padding: 50px 160px;
   `,
 
   content: css`
@@ -22,6 +22,10 @@ export const projectDetailCss = {
     flex-direction: column;
     align-items: flex-start;
     gap: 50px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   `,
 
   projectImageWrapper: css`

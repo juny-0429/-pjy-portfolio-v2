@@ -9,12 +9,14 @@ export default function QuickMenu() {
   const [activeSection, setActiveSection] = useRecoilState<ProjectDetailMenu>(activeProjectDetailSectionState);
 
   return (
-    <ul css={quickMenuCss.wrapper}>
-      {quickMenuList.map((menu) => (
-        <Link key={menu.value} to={menu.value} spy={true} smooth={true} duration={500} offset={-200} onSetActive={() => setActiveSection(menu.value)}>
-          <li css={[quickMenuCss.menu, activeSection === menu.value && quickMenuCss.activeMenu]}>{menu.label}</li>
-        </Link>
-      ))}
-    </ul>
+    <nav css={quickMenuCss.wrapper}>
+      <ul>
+        {quickMenuList.map((menu) => (
+          <Link key={menu.value} to={menu.value} spy={true} smooth={true} duration={100} offset={-400} onSetActive={() => setActiveSection(menu.value)}>
+            <li css={[quickMenuCss.menu, activeSection === menu.value && quickMenuCss.activeMenu]}>{menu.label}</li>
+          </Link>
+        ))}
+      </ul>
+    </nav>
   );
 }

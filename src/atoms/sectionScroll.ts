@@ -8,5 +8,5 @@ export const activeSectionState = atom<MainMenu>({
 
 export const activeProjectDetailSectionState = atom<ProjectDetailMenu>({
   key: 'activeProjectDetailSectionState',
-  default: '프로젝트목적',
+  default: '프로젝트정보',
 });
