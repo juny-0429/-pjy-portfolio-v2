@@ -2,7 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   compiler: {
-    emotion: true,
+    emotion: {
+      // 이 설정이 SSR을 활성화하고 CSS 속성을 활성화합니다.
+      sourceMap: true,
+      autoLabel: 'dev-only',
+      labelFormat: '[local]',
+      ssr: true,
+    },
   },
   experimental: {
     scrollRestoration: true,

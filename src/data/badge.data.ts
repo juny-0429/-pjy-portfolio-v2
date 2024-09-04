@@ -15,6 +15,8 @@ export const colorMap: { [key in BadgeColor]: string } = {
   HTML_COLOR: theme.colors.HTML_COLOR,
   CSS_COLOR: theme.colors.CSS_COLOR,
   REACT_COLOR: theme.colors.REACT_COLOR,
+  NEXT_COLOR: theme.colors.NEXT_COLOR,
+  VUE_COLOR: theme.colors.VUE_COLOR,
   JAVA_COLOR: theme.colors.JAVA_COLOR,
   SPRING_COLOR: theme.colors.SPRING_COLOR,
   RESTful_COLOR: theme.colors.RESTful_COLOR,
@@ -24,5 +26,7 @@ export const colorMap: { [key in BadgeColor]: string } = {
   GITHUB_COLOR: theme.colors.GITHUB_COLOR,
   TYPESCRIPT_COLOR: theme.colors.TYPESCRIPT_COLOR,
   SCSS_COLOR: theme.colors.SCSS_COLOR,
+  GITBOOK_COLOR: theme.colors.GITBOOK_COLOR,
+  NOTION_COLOR: theme.colors.NOTION_COLOR,
   JPA_COLOR: theme.colors.JPA_COLOR,
 };
