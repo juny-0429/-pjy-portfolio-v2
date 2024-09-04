@@ -46,7 +46,7 @@ export default function MainCareer() {
   useMotionValueEvent(scrollYProgress, 'change', updateTextColors);
 
   return (
-    <div css={mainCareerCss.wrapper} ref={ref}>
+    <section css={mainCareerCss.wrapper} ref={ref}>
       {/* mobile */}
       <div css={[mainCareerCss.careerList, commonCss.onlyMobileVisible]}>
         {careerList.map((item, index) => (
@@ -55,7 +55,7 @@ export default function MainCareer() {
       </div>
 
       {/* pc */}
-      <p css={[mainCareerCss.title, commonCss.onlyPcVisibleFlex]}>CAREER</p>
+      <h2 css={[mainCareerCss.title, commonCss.onlyPcVisibleFlex]}>CAREER</h2>
 
       <div css={[mainCareerCss.careerList, commonCss.onlyPcVisibleFlex]}>
         {/* progress */}
@@ -94,6 +94,6 @@ export default function MainCareer() {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

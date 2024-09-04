@@ -10,7 +10,7 @@ import PjyProfileImage from '@/assets/images/park-junyoung-profile.jpg';
 
 export default function MainAbout() {
   return (
-    <div css={mainAboutCss.wrapper}>
+    <section css={mainAboutCss.wrapper}>
       <div css={[mainAboutCss.profileImageWrapper, commonCss.onlyPcVisibleBlock]}>
         <Image src={PjyProfileImage.src} priority fill alt="pjy profile image" />
       </div>
@@ -36,7 +36,7 @@ export default function MainAbout() {
 
         {/* Archiving */}
         <div css={mainAboutCss.archivingWrapper}>
-          <p css={[mainAboutCss.archivingTitle, commonCss.onlyMobileVisible]}>ARCHIVING</p>
+          <h2 css={[mainAboutCss.archivingTitle, commonCss.onlyMobileVisible]}>ARCHIVING</h2>
 
           {/* Archiving Link List */}
           <div css={mainAboutCss.linkListWrapper}>
@@ -49,6 +49,6 @@ export default function MainAbout() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
