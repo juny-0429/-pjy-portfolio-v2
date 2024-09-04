@@ -1,8 +1,7 @@
-import { commonCss, scrollbarCss } from '@/styles/common.styles';
+import { commonCss } from '@/styles/common.styles';
 import theme from '@/theme';
 import sizes from '@/theme/sizes';
 import { css } from '@emotion/react';
-import { title } from 'process';
 
 export const projectDetailCss = {
   wrapper: css`

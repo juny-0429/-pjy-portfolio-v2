@@ -32,7 +32,7 @@ export default function MainCareer() {
       { range: [0.7, 1], index: 2 },
     ];
 
-    const newTextColors = textColors.map((_, i) => theme.colors.mainLightGray);
+    const newTextColors = textColors.map((_, _i) => theme.colors.mainLightGray);
 
     colorStages.forEach(({ range, index }) => {
       if (progress >= range[0] && progress < range[1]) {
