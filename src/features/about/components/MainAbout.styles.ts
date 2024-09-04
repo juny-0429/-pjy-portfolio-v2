@@ -27,7 +27,11 @@ export const mainAboutCss = {
     border-radius: 10px;
   `,
 
-  informationWrapper: css``,
+  informationWrapper: css`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  `,
 
   titleWrapper: css`
     display: flex;

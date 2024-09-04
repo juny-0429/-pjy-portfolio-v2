@@ -20,7 +20,7 @@ export default function MainConnect() {
     <section css={mainConnectCss.wrapper}>
       {/* title */}
       <div css={mainConnectCss.titleWrapper}>
-        <p css={[mainConnectCss.title, commonCss.onlyPcVisibleBlock]}>CONNECT</p>
+        <h2 css={[mainConnectCss.title, commonCss.onlyPcVisibleBlock]}>CONNECT</h2>
         <p css={mainConnectCss.description}>프론트엔드 개발자로서 최신 트렌드를 반영하며, 사용자 중심의 웹을 구현하고자 합니다.</p>
       </div>
 

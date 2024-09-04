@@ -55,7 +55,7 @@ export default function MainCareer() {
       </div>
 
       {/* pc */}
-      <p css={[mainCareerCss.title, commonCss.onlyPcVisibleFlex]}>CAREER</p>
+      <h2 css={[mainCareerCss.title, commonCss.onlyPcVisibleFlex]}>CAREER</h2>
 
       <div css={[mainCareerCss.careerList, commonCss.onlyPcVisibleFlex]}>
         {/* progress */}
