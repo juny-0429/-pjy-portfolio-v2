@@ -12,7 +12,7 @@ export default function ProjectList() {
       {projectListData.map((project) => (
         <li key={project.title} css={projectListCss.projectWrapper}>
           <div css={projectListCss.mainImageWrapper}>
-            <Image src={project.mainImage} fill alt="project main image" style={{ objectFit: 'cover' }} />
+            <Image src={project.mainImage} fill sizes="100%" alt="project main image" style={{ objectFit: 'cover' }} />
           </div>
 
           <div css={projectListCss.projectTab}>{project.team}</div>
@@ -20,7 +20,7 @@ export default function ProjectList() {
           <div css={projectListCss.titleWrapper}>
             {project.logo && (
               <div css={projectListCss.projectLogoWrapper}>
-                <Image src={project.logo} fill alt="project logo" />
+                <Image src={project.logo} fill sizes="100%" alt="project logo" />
               </div>
             )}
             <p css={projectListCss.projectTitle}>{project.title}</p>

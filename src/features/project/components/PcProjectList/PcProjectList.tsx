@@ -34,7 +34,7 @@ export default function PcProjectList() {
           <Link href={`/project/${project.id}`}>
             <div css={pcProjectCss.projectWrapper}>
               <div css={pcProjectCss.mainImageWrapper}>
-                <Image src={project.mainImage} fill alt="project main image" style={{ objectFit: 'cover' }} />
+                <Image src={project.mainImage} fill sizes="100%" alt="project main image" style={{ objectFit: 'cover' }} />
               </div>
 
               <div css={pcProjectCss.projectTab}>{project.team}</div>
@@ -42,7 +42,7 @@ export default function PcProjectList() {
               <div css={pcProjectCss.titleWrapper}>
                 {project.logo && (
                   <div css={pcProjectCss.projectLogoWrapper}>
-                    <Image src={project.logo} fill alt="project logo" />
+                    <Image src={project.logo} fill sizes="100%" alt="project logo" />
                   </div>
                 )}
                 <p css={pcProjectCss.projectTitle}>{project.title}</p>

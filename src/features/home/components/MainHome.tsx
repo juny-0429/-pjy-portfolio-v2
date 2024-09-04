@@ -25,7 +25,7 @@ export default function MainHome() {
         </div>
 
         <div css={[mainHomeCss.profileImageWrapper, commonCss.onlyMobileVisible]}>
-          <Image src={PjyProfileImage.src} priority fill alt="pjy profile image" />
+          <Image src={PjyProfileImage.src} fill sizes="100%" alt="pjy profile image" />
         </div>
       </div>
 

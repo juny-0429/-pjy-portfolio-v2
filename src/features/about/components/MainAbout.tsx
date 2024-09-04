@@ -12,7 +12,7 @@ export default function MainAbout() {
   return (
     <section css={mainAboutCss.wrapper}>
       <div css={[mainAboutCss.profileImageWrapper, commonCss.onlyPcVisibleBlock]}>
-        <Image src={PjyProfileImage.src} priority fill alt="pjy profile image" />
+        <Image src={PjyProfileImage.src} fill sizes="100%" alt="pjy profile image" />
       </div>
 
       <div css={mainAboutCss.informationWrapper}>

@@ -9,14 +9,14 @@ export default function LogoSlider() {
         <ul css={logoSliderCss.logoSlide}>
           {logos.map((logo) => (
             <li key={logo.id} css={logoSliderCss.logo}>
-              <Image src={logo.src} alt={logo.alt} fill />
+              <Image src={logo.src} fill sizes="100%" alt={logo.alt} />
             </li>
           ))}
         </ul>
         <ul css={logoSliderCss.logoSlide}>
           {logos.map((logo) => (
             <li key={logo.id} css={logoSliderCss.logo}>
-              <Image src={logo.src} alt={logo.alt} fill />
+              <Image src={logo.src} fill sizes="100%" alt={logo.alt} />
             </li>
           ))}
         </ul>
