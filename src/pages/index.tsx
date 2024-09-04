@@ -1,5 +1,3 @@
-import Head from 'next/head';
-import { pretendard } from '@/theme/fonts';
 import { Element } from 'react-scroll';
 import MainHome from '@/features/home/components/MainHome';
 import MainAbout from '@/features/about/components/MainAbout';

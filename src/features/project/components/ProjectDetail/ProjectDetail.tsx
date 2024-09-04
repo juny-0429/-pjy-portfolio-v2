@@ -12,6 +12,8 @@ import { quickMenuList } from '../../data/projectDetail.data';
 import QuickMenu from '../QuickMenu/QuickMenu';
 import { Element } from 'react-scroll';
 import Footer from '@/components/Footer/Footer';
+import { commonCss } from '@/styles/common.styles';
+import Link from 'next/link';
 
 export default function ProjectDetail() {
   const router = useRouter();
@@ -36,33 +38,62 @@ export default function ProjectDetail() {
               <Image src={project.mainImage} fill alt="project main images" />
             </div>
 
+            <div css={[projectDetailCss.titleWrapper, commonCss.onlyMobileVisible]}>
+              <h1 css={projectDetailCss.title}>{project.title}</h1>
+              <Image src={project.logo} width={50} height={50} alt="project logo" />
+            </div>
+
+            <div css={projectDetailCss.divider} />
+
+            {/* 진행기간 */}
+            <section css={projectDetailCss.infoWrapper}>
+              <h2 css={projectDetailCss.infoTitle}>진행기간</h2>
+              <time css={projectDetailCss.description}>{project.date}</time>
+            </section>
+
             {/* 스킬 */}
-            <div css={projectDetailCss.infoWrapper}>
-              <p css={projectDetailCss.infoTitle}>스킬</p>
+            <section css={projectDetailCss.infoWrapper}>
+              <h2 css={projectDetailCss.infoTitle}>스킬</h2>
 
               <div css={projectDetailCss.skillList}>
                 {project.skills.map((skill, index) => (
-                  <Badge key={index} color={skillColorMap[skill as SkillType]} type="rounded" fillStyle="fill" cssStyle={sizes.badgeSize[45]}>
+                  <Badge key={index} color={skillColorMap[skill as SkillType]} type="rounded" fillStyle="fill" cssStyle={sizes.badgeSize[23]}>
                     {skill}
                   </Badge>
                 ))}
               </div>
-            </div>
+            </section>
 
             {/* 인원 */}
-            <div css={projectDetailCss.infoWrapper}>
-              <p css={projectDetailCss.infoTitle}>인원</p>
+            <section css={projectDetailCss.infoWrapper}>
+              <h2 css={projectDetailCss.infoTitle}>인원</h2>
               <div css={projectDetailCss.memberWrapper}>
-                <p css={projectDetailCss.member}>{project.Member}</p>
-                <FeatherIcons.Users width={40} height={40} color={theme.colors.mainLightBlack} />
+                <span css={projectDetailCss.member}>{project.Member}</span>
+                <FeatherIcons.Users width={16} height={16} color={theme.colors.mainLightBlack} />
               </div>
-            </div>
+            </section>
 
-            {/* 프로젝트 소개 */}
-            <div css={projectDetailCss.infoWrapper}>
-              <p css={projectDetailCss.infoTitle}>프로젝트 소개</p>
+            {/* 링크 */}
+            <section css={[projectDetailCss.infoWrapper, commonCss.onlyMobileVisible]}>
+              <h2 css={projectDetailCss.infoTitle}>링크</h2>
+              <nav>
+                <ul css={projectDetailCss.projectLinkList}>
+                  {project.link.map((link, index) => (
+                    <li key={index}>
+                      <Link href={link.url} target="_blank" rel="noopener noreferrer">
+                        <link.LinkIcon width={35} height={35} color={theme.colors.mainLightBlack} />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </section>
+
+            {/* 간단 소개 */}
+            <section css={projectDetailCss.infoWrapper}>
+              <h2 css={projectDetailCss.infoTitle}>간단 소개</h2>
               <p css={projectDetailCss.description}>{project.description}</p>
-            </div>
+            </section>
           </Element>
 
           <div css={projectDetailCss.divider} />
@@ -73,13 +104,13 @@ export default function ProjectDetail() {
               .filter((menu) => menu.value !== '프로젝트정보')
               .map((menu) => (
                 <Element name={menu.value as string} key={menu.value}>
-                  <div css={projectDetailCss.section}>
-                    <div css={projectDetailCss.titleWrapper}>
-                      <FeatherIcons.Triangle css={projectDetailCss.titleIcon} />
-                      <p css={projectDetailCss.detailSectionTitle}>{menu.label}</p>
+                  <section css={projectDetailCss.section}>
+                    <div css={projectDetailCss.sectionWrapper}>
+                      <FeatherIcons.Triangle css={projectDetailCss.sectionIcon} />
+                      <h3 css={projectDetailCss.detailSectionTitle}>{menu.label}</h3>
                     </div>
                     <p css={projectDetailCss.detailSectionContent}>{project.detail[menu.value as keyof typeof project.detail]}</p>
-                  </div>
+                  </section>
                 </Element>
               ))}
           </div>

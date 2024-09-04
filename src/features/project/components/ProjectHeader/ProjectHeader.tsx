@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { projectHeaderCss } from './ProjectHeader.styles';
 import theme from '@/theme';
 import FeatherIcons from '@/theme/featherIcons';
+import { commonCss } from '@/styles/common.styles';
 
 interface Props {
   date: string;
@@ -11,14 +12,14 @@ interface Props {
 
 export default function ProjectHeader({ date, title, linkList }: Props) {
   return (
-    <header css={projectHeaderCss.header}>
+    <header css={[projectHeaderCss.header, commonCss.onlyPcVisibleFlex]}>
       <Link href="/" css={projectHeaderCss.backIconWrapper}>
         <FeatherIcons.ChevronLeft width={50} height={50} color={theme.colors.mainLightBlack} />
       </Link>
 
       <div css={projectHeaderCss.titleWrapper}>
-        <p css={projectHeaderCss.date}>{date}</p>
-        <p css={projectHeaderCss.title}>{title}</p>
+        <time css={projectHeaderCss.date}>{date}</time>
+        <h1 css={projectHeaderCss.title}>{title}</h1>
       </div>
 
       <nav>
