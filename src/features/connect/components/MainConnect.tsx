@@ -17,7 +17,7 @@ export default function MainConnect() {
   };
 
   return (
-    <div css={mainConnectCss.wrapper}>
+    <section css={mainConnectCss.wrapper}>
       {/* title */}
       <div css={mainConnectCss.titleWrapper}>
         <p css={[mainConnectCss.title, commonCss.onlyPcVisibleBlock]}>CONNECT</p>
@@ -45,6 +45,6 @@ export default function MainConnect() {
 
         <ConnectIconList />
       </ul>
-    </div>
+    </section>
   );
 }

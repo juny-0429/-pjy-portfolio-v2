@@ -6,7 +6,7 @@ import PcProjectList from './PcProjectList/PcProjectList';
 
 export default function MainProject() {
   return (
-    <div css={mainProjectCss.wrapper}>
+    <section css={mainProjectCss.wrapper}>
       <p css={[mainProjectCss.title, commonCss.onlyPcVisibleBlock]}>PROJECT</p>
 
       {/* mobile */}
@@ -14,6 +14,6 @@ export default function MainProject() {
 
       {/* pc */}
       <PcProjectList />
-    </div>
+    </section>
   );
 }

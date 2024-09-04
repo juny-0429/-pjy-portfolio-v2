@@ -6,7 +6,7 @@ import { commonCss } from '@/styles/common.styles';
 
 export default function MainHome() {
   return (
-    <div css={mainHomeCss.wrapper}>
+    <section css={mainHomeCss.wrapper}>
       <div css={mainHomeCss.homeHeader}>
         <p css={[mainHomeCss.headerSubTitle, commonCss.onlyMobileVisible]}>Front-End</p>
         <p css={[mainHomeCss.headerSubTitle, commonCss.onlyPcVisibleBlock]}>PJY</p>
@@ -30,6 +30,6 @@ export default function MainHome() {
       </div>
 
       <FeatherIcons.ChevronDown css={mainHomeCss.downArrow} />
-    </div>
+    </section>
   );
 }

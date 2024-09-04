@@ -46,7 +46,7 @@ export default function MainCareer() {
   useMotionValueEvent(scrollYProgress, 'change', updateTextColors);
 
   return (
-    <div css={mainCareerCss.wrapper} ref={ref}>
+    <section css={mainCareerCss.wrapper} ref={ref}>
       {/* mobile */}
       <div css={[mainCareerCss.careerList, commonCss.onlyMobileVisible]}>
         {careerList.map((item, index) => (
@@ -94,6 +94,6 @@ export default function MainCareer() {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

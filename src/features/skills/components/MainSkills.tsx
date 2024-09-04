@@ -5,7 +5,7 @@ import LogoSlider from './LogoSlider/LogoSlider';
 
 export default function MainSkills() {
   return (
-    <div css={mainSkillsCss.wrapper}>
+    <section css={mainSkillsCss.wrapper}>
       <LogoSlider />
 
       <div css={mainSkillsCss.skillCategoryList}>
@@ -32,6 +32,6 @@ export default function MainSkills() {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
