@@ -74,7 +74,7 @@ export default function ProjectDetail() {
             </section>
 
             {/* 링크 */}
-            <section css={projectDetailCss.infoWrapper}>
+            <section css={[projectDetailCss.infoWrapper, commonCss.onlyMobileVisible]}>
               <h2 css={projectDetailCss.infoTitle}>링크</h2>
               <nav>
                 <ul css={projectDetailCss.projectLinkList}>
