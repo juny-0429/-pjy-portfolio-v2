@@ -14,12 +14,13 @@ export default function CareerItem({ title, logo, date, description, children }:
     <div css={careerItemCss.wrapper}>
       <div css={careerItemCss.titleWrapper}>
         <p css={careerItemCss.title}>{title}</p>
+
         <div css={careerItemCss.logoWrapper}>
           <Image src={logo} width={30} height={30} alt="career logo" />
         </div>
       </div>
 
-      <p css={careerItemCss.date}>{date}</p>
+      <time css={careerItemCss.date}>{date}</time>
 
       <p css={careerItemCss.description}>{description}</p>
 

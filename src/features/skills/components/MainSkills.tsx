@@ -18,7 +18,7 @@ export default function MainSkills() {
 
           return (
             <div key={index} css={[mainSkillsCss.skillCategoryWrapper, colorStyle]}>
-              <p css={[mainSkillsCss.skillCategoryTitle, { color: colorStyle.color }]}>{item.category}</p>
+              <h3 css={[mainSkillsCss.skillCategoryTitle, { color: colorStyle.color }]}>{item.category}</h3>
 
               <ul css={mainSkillsCss.skillList}>
                 {item.skills.map((skill, skillIndex) => (

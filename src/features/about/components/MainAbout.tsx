@@ -36,7 +36,7 @@ export default function MainAbout() {
 
         {/* Archiving */}
         <div css={mainAboutCss.archivingWrapper}>
-          <p css={[mainAboutCss.archivingTitle, commonCss.onlyMobileVisible]}>ARCHIVING</p>
+          <h2 css={[mainAboutCss.archivingTitle, commonCss.onlyMobileVisible]}>ARCHIVING</h2>
 
           {/* Archiving Link List */}
           <div css={mainAboutCss.linkListWrapper}>

@@ -29,7 +29,7 @@ export default function MainConnect() {
         <li css={mainConnectCss.connectItem}>
           <div css={mainConnectCss.connectItemLabel}>
             <FeatherIcons.Phone />
-            <p>{INFORMATION.PHONE_NUMBER}</p>
+            <span>{INFORMATION.PHONE_NUMBER}</span>
           </div>
           <FeatherIcons.Copy css={mainConnectCss.copyIcon} onClick={() => handleCopyClick(INFORMATION.PHONE_NUMBER)} />
         </li>
@@ -38,7 +38,7 @@ export default function MainConnect() {
         <li css={mainConnectCss.connectItem}>
           <div css={mainConnectCss.connectItemLabel}>
             <FeatherIcons.Mail />
-            <p>{INFORMATION.EMAIL}</p>
+            <span>{INFORMATION.EMAIL}</span>
           </div>
           <FeatherIcons.Copy css={mainConnectCss.copyIcon} onClick={() => handleCopyClick(INFORMATION.EMAIL)} />
         </li>
