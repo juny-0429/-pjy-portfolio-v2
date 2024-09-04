@@ -35,7 +35,7 @@ export default function ProjectDetail() {
           <Element name="프로젝트정보" css={projectDetailCss.content}>
             {/* main Image */}
             <div css={projectDetailCss.projectImageWrapper}>
-              <Image src={project.mainImage} fill alt="project main images" />
+              <Image src={project.mainImage} fill sizes="100%" alt="project main images" />
             </div>
 
             <div css={[projectDetailCss.titleWrapper, commonCss.onlyMobileVisible]}>

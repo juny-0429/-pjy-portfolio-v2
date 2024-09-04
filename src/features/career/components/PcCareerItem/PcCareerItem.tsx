@@ -25,7 +25,7 @@ export default function PcCareerItem({ index, title, logo, date, description, ch
         </div>
 
         <div css={pcCareerItemCss.logoWrapper}>
-          <Image src={logo} fill alt="career logo" />
+          <Image src={logo} fill sizes="100%" alt="career logo" />
         </div>
       </div>
 
