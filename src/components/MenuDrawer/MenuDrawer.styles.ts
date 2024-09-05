@@ -4,8 +4,8 @@ import { css } from '@emotion/react';
 export const menuDrawerCss = {
   menuButton: css`
     position: absolute;
-    top: 15px;
-    right: 10px;
+    top: 20px;
+    right: 15px;
     width: 24px;
     height: 24px;
   `,

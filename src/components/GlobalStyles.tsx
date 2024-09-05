@@ -8,7 +8,6 @@ export default function GlobalStyles() {
         html,
         body {
           font-family: ${pretendard.style.fontFamily};
-          overflow: auto;
           -ms-overflow-style: none;
           scrollbar-width: none;
 
