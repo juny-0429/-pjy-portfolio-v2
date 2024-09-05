@@ -14,6 +14,13 @@ const nextConfig = {
     scrollRestoration: true,
   },
 
+  // 다국어 설정
+  i18n: {
+    locales: ['en-US', 'ko'],
+    defaultLocale: 'ko',
+    localeDetection: true,
+  },
+
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
