@@ -9,7 +9,7 @@ export const headerCss = {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 10px;
+    padding: 20px 15px;
 
     background: ${theme.colors.white};
 
@@ -24,7 +24,7 @@ export const headerCss = {
 
   headerTitle: css`
     color: ${theme.colors.mainLightBlack};
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 900;
   `,
 

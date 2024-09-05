@@ -10,16 +10,31 @@ export const projectHeaderCss = {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 30px;
-    padding: 30px 50px;
+    gap: 15px;
+    padding: 15px 20px;
     box-sizing: border-box;
 
     background: ${theme.colors.white};
+
+    ${theme.media.pc} {
+      gap: 30px;
+      padding: 30px 50px;
+    }
   `,
 
   backIconWrapper: css`
-    width: 50px;
-    height: 50px;
+    svg {
+      width: 35px;
+      height: 35px;
+      color: ${theme.colors.mainLightBlack};
+    }
+
+    ${theme.media.pc} {
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
   `,
 
   titleWrapper: css`
@@ -38,8 +53,13 @@ export const projectHeaderCss = {
   `,
 
   title: css`
-    font-size: 45px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 600;
+
+    ${theme.media.pc} {
+      font-size: 45px;
+      font-weight: 400;
+    }
   `,
 
   projectLinkList: css`

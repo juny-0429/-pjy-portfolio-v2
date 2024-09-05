@@ -76,6 +76,10 @@ export const drawerCss = {
     align-items: center;
     width: 100%;
     height: 24px;
+
+    svg {
+      stroke-width: 1px;
+    }
   `,
 
   title: css`
