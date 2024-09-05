@@ -2,6 +2,7 @@ import { useState } from 'react';
 import FeatherIcons from '@/theme/featherIcons';
 import { moreOptionMenuCss } from './MoreOptionMenu.styles';
 import { animateScroll as scroll } from 'react-scroll';
+import MultiLanguageMenu from './MultiLanguageMenu/MultiLanguageMenu';
 
 export default function MoreOptionMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +32,7 @@ export default function MoreOptionMenu() {
           <FeatherIcons.Mail />
         </button>
         {/* 다국어 */}
-        <button type="button" css={moreOptionMenuCss.moreOptionMenu}>
-          <FeatherIcons.Globe />
-        </button>
+        <MultiLanguageMenu />
         {/* 다크 모드 */}
         <button type="button" css={moreOptionMenuCss.moreOptionMenu}>
           <FeatherIcons.Sun />
