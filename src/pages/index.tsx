@@ -5,8 +5,11 @@ import MainSkills from '@/features/skills/components/MainSkills';
 import MainConnect from '@/features/connect/components/MainConnect';
 import MainCareer from '@/features/career/components/MainCareer';
 import MainProject from '@/features/project/components/MainProject';
+import { useScrollRestoration } from '@/hooks/useScrollRestoration';
 
 export default function Home() {
+  useScrollRestoration('index');
+
   return (
     <>
       <Element name="JUNY">
