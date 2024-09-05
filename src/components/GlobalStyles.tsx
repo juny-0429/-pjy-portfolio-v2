@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { Global, css } from '@emotion/react';
 import { pretendard } from '@/theme/fonts';
 
