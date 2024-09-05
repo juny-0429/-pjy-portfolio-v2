@@ -21,8 +21,10 @@ export const menuDrawerCss = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
   `,
 
   menuDrawerItem: css`

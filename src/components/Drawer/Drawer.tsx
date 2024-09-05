@@ -14,7 +14,7 @@ export default function Drawer({ title, isOpen, onToggle, direction = 'left', ch
     <>
       <div css={[drawerCss.drawer, drawerDirectionCss[direction], isOpen && drawerCss.open]}>
         <div css={drawerCss.titleWrapper}>
-          <p css={drawerCss.title}>{title}</p>
+          <span css={drawerCss.title}>{title}</span>
           <button onClick={onToggle} css={drawerCss.closeButton}>
             <FeatherIcons.X width={24} height={24} />
           </button>
