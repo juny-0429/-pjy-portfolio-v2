@@ -38,11 +38,6 @@ export default function ProjectDetail() {
               <Image src={project.mainImage} fill sizes="100%" alt="project main images" />
             </div>
 
-            <div css={[projectDetailCss.titleWrapper, commonCss.onlyMobileVisible]}>
-              <h1 css={projectDetailCss.title}>{project.title}</h1>
-              <Image src={project.logo} width={50} height={50} alt="project logo" />
-            </div>
-
             <div css={projectDetailCss.divider} />
 
             {/* 진행기간 */}

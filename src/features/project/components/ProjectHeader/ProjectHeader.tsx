@@ -12,17 +12,17 @@ interface Props {
 
 export default function ProjectHeader({ date, title, linkList }: Props) {
   return (
-    <header css={[projectHeaderCss.header, commonCss.onlyPcVisibleFlex]}>
+    <header css={projectHeaderCss.header}>
       <Link href="/" css={projectHeaderCss.backIconWrapper}>
-        <FeatherIcons.ChevronLeft width={50} height={50} color={theme.colors.mainLightBlack} />
+        <FeatherIcons.ChevronLeft />
       </Link>
 
       <div css={projectHeaderCss.titleWrapper}>
-        <time css={projectHeaderCss.date}>{date}</time>
+        <time css={[projectHeaderCss.date, commonCss.onlyPcVisibleBlock]}>{date}</time>
         <h1 css={projectHeaderCss.title}>{title}</h1>
       </div>
 
-      <nav>
+      <nav css={commonCss.onlyPcVisibleBlock}>
         <ul css={projectHeaderCss.projectLinkList}>
           {linkList.map((link, index) => (
             <li key={index}>
