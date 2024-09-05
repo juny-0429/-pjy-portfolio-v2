@@ -26,7 +26,7 @@ const slideDown = keyframes`
 export const moreOptionMenuCss = {
   wrapper: css`
     position: fixed;
-    bottom: 15px;
+    bottom: 40px;
     right: 10px;
 
     ${theme.media.pc} {
