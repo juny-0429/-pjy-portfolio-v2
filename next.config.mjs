@@ -1,9 +1,12 @@
+import i18nConfig from './next-i18next.config.js';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  i18n: i18nConfig.i18n,
+
   compiler: {
     emotion: {
-      // 이 설정이 SSR을 활성화하고 CSS 속성을 활성화합니다.
       sourceMap: true,
       autoLabel: 'dev-only',
       labelFormat: '[local]',
@@ -12,13 +15,6 @@ const nextConfig = {
   },
   experimental: {
     scrollRestoration: true,
-  },
-
-  // 다국어 설정
-  i18n: {
-    locales: ['en-US', 'ko'],
-    defaultLocale: 'ko',
-    localeDetection: true,
   },
 
   webpack(config) {
