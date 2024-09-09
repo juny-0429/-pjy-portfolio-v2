@@ -3,8 +3,6 @@ import { ArchivingItemType } from '../../data/archiving.data';
 import { archivingItemCss } from './ArchivingItem.styles';
 import FeatherIcons from '@/theme/featherIcons';
 import { useDarkMode } from '@/hooks/useDarkMode';
-import { darkModeCss } from '@/styles/common.styles';
-import theme from '@/theme';
 
 interface Props {
   archivingItem: ArchivingItemType;
