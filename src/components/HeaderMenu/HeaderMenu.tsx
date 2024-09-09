@@ -5,6 +5,8 @@ import { MainMenu } from '@/types/menu.types';
 import { useRecoilState } from 'recoil';
 import { activeSectionState } from '@/atoms/sectionScroll';
 import { Interpolation, Theme } from '@emotion/react';
+import { useDarkMode } from '@/hooks/useDarkMode';
+import { darkModeCss } from '@/styles/common.styles';
 
 interface Props {
   cssStyle?: Interpolation<Theme>;
@@ -12,6 +14,7 @@ interface Props {
 
 export default function HeaderMenu({ cssStyle }: Props) {
   const [activeSection, setActiveSection] = useRecoilState<MainMenu>(activeSectionState);
+  const { themeMode } = useDarkMode();
 
   return (
     <nav>
@@ -23,7 +26,7 @@ export default function HeaderMenu({ cssStyle }: Props) {
             spy={true}
             smooth={true}
             duration={500}
-            css={[headerMenuCss.menuItem, activeSection === menu && headerMenuCss.activeItem]}
+            css={[headerMenuCss.menuItem, activeSection === menu && headerMenuCss.activeItem, themeMode === 'dark' && darkModeCss.darkModeColor]}
             onSetActive={() => setActiveSection(menu)}
           >
             <li>{menu}</li>

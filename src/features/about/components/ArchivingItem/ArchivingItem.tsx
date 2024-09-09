@@ -2,12 +2,19 @@ import Link from 'next/link';
 import { ArchivingItemType } from '../../data/archiving.data';
 import { archivingItemCss } from './ArchivingItem.styles';
 import FeatherIcons from '@/theme/featherIcons';
+import { useDarkMode } from '@/hooks/useDarkMode';
+import { darkModeCss } from '@/styles/common.styles';
+import theme from '@/theme';
 
 interface Props {
   archivingItem: ArchivingItemType;
 }
 
 export default function ArchivingItem({ archivingItem }: Props) {
+  const { themeMode } = useDarkMode();
+
+  console.log('themeMode = ', themeMode);
+
   return (
     <div css={archivingItemCss.wrapper}>
       <div css={archivingItemCss.titleWrapper}>

@@ -36,6 +36,11 @@ export const projectListCss = {
     }
   `,
 
+  darkModeProjectBackground: css`
+    background: ${theme.colors.mainBeige};
+    color: ${theme.colors.mainLightBlack};
+  `,
+
   mainImageWrapper: css`
     position: relative;
     width: 100%;

@@ -1,49 +1,13 @@
-import { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import CareerItem from './CareerItem/CareerItem';
+import PcCareerItem from './PcCareerItem/PcCareerItem';
 import { mainCareerCss, progressBarCss } from './MainCareer.styles';
 import { commonCss } from '@/styles/common.styles';
-import { motion, useMotionValueEvent, useScroll, useSpring, useTransform } from 'framer-motion';
-import PcCareerItem from './PcCareerItem/PcCareerItem';
 import { careerList } from '../data/career.data';
-import theme from '@/theme';
+import { useCareerScroll } from '../hooks/useCareerScroll';
 
 export default function MainCareer() {
-  const [textColors, setTextColors] = useState(Array(careerList.length).fill(theme.colors.mainLightGray));
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  });
-
-  const transformedProgress = useTransform(scrollYProgress, [0.35, 1], [0, 1]);
-
-  const scaleY = useSpring(transformedProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
-  const translateY = useTransform(scaleY, [0, 1], ['0%', '100%']);
-
-  const updateTextColors = (progress: number) => {
-    const colorStages = [
-      { range: [0, 0.5], index: 0 },
-      { range: [0.5, 0.6], index: 1 },
-      { range: [0.7, 1], index: 2 },
-    ];
-
-    const newTextColors = textColors.map((_, _i) => theme.colors.mainLightGray);
-
-    colorStages.forEach(({ range, index }) => {
-      if (progress >= range[0] && progress < range[1]) {
-        newTextColors[index] = theme.colors.mainLightGreen;
-      }
-    });
-
-    setTextColors(newTextColors);
-  };
-
-  useMotionValueEvent(scrollYProgress, 'change', updateTextColors);
+  const { ref, textColors, scaleY, translateY } = useCareerScroll();
 
   return (
     <section css={mainCareerCss.wrapper} ref={ref}>
@@ -88,7 +52,14 @@ export default function MainCareer() {
                   gridRow: row, // gridRow 값 설정
                 }}
               >
-                <PcCareerItem index={index} title={item.title} logo={item.logo} date={item.date} description={item.description} textColor={textColors[index]} />
+                <PcCareerItem
+                  index={index}
+                  title={item.title}
+                  logo={item.logo}
+                  date={item.date}
+                  description={item.description}
+                  textColor={textColors[index]} // 훅에서 전달된 텍스트 색상
+                />
               </motion.div>
             );
           })}

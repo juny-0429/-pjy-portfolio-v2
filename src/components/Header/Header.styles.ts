@@ -23,13 +23,11 @@ export const headerCss = {
   `,
 
   headerTitle: css`
-    color: ${theme.colors.mainLightBlack};
     font-size: 30px;
     font-weight: 900;
   `,
 
   pcHeaderTitle: css`
-    color: ${theme.colors.mainLightBlack};
     font-size: 40px;
     font-weight: 300;
   `,

@@ -6,14 +6,17 @@ import { projectListData } from '../../data/project.data';
 import { skillColorMap, SkillType } from '@/features/skills/data/skillColorMap.data';
 import Badge from '@/components/Badge/Badge';
 import sizes from '@/theme/sizes';
-import { commonCss } from '@/styles/common.styles';
+import { commonCss, darkModeCss } from '@/styles/common.styles';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import 'swiper/css/pagination';
 import Link from 'next/link';
+import { useDarkMode } from '@/hooks/useDarkMode';
 
 export default function PcProjectList() {
+  const { themeMode } = useDarkMode();
+
   return (
     <Swiper
       modules={[Pagination, Autoplay]}
@@ -32,12 +35,14 @@ export default function PcProjectList() {
       {projectListData.map((project) => (
         <SwiperSlide key={project.id}>
           <Link href={`/project/${project.id}`}>
-            <div css={pcProjectCss.projectWrapper}>
+            <div css={[pcProjectCss.projectWrapper, themeMode === 'dark' && pcProjectCss.darkModeProjectBackground]}>
               <div css={pcProjectCss.mainImageWrapper}>
                 <Image src={project.mainImage} fill sizes="100%" alt="project main image" style={{ objectFit: 'cover' }} />
               </div>
 
-              <div css={pcProjectCss.projectTab}>{project.team}</div>
+              <div css={[pcProjectCss.projectTab, themeMode === 'dark' && pcProjectCss.darkModeProjectBackground]}>
+                <span>{project.team}</span>
+              </div>
 
               <div css={pcProjectCss.titleWrapper}>
                 {project.logo && (
@@ -45,7 +50,7 @@ export default function PcProjectList() {
                     <Image src={project.logo} fill sizes="100%" alt="project logo" />
                   </div>
                 )}
-                <p css={pcProjectCss.projectTitle}>{project.title}</p>
+                <p css={[pcProjectCss.projectTitle, themeMode === 'dark' && darkModeCss.darkModeInvertColor]}>{project.title}</p>
               </div>
 
               <div css={pcProjectCss.skillList}>

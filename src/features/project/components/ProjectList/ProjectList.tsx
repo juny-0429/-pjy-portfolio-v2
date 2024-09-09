@@ -4,20 +4,25 @@ import { projectListData } from '../../data/project.data';
 import Badge from '@/components/Badge/Badge';
 import { skillColorMap, SkillType } from '@/features/skills/data/skillColorMap.data';
 import sizes from '@/theme/sizes';
-import { commonCss } from '@/styles/common.styles';
+import { commonCss, darkModeCss } from '@/styles/common.styles';
 import Link from 'next/link';
+import { useDarkMode } from '@/hooks/useDarkMode';
 
 export default function ProjectList() {
+  const { themeMode } = useDarkMode();
+
   return (
     <ul css={[projectListCss.projectList, commonCss.onlyMobileVisible]}>
       {projectListData.map((project) => (
         <Link href={`/project/${project.id}`} key={project.id} style={{ width: '100%' }}>
-          <li css={projectListCss.projectWrapper}>
+          <li css={[projectListCss.projectWrapper, themeMode === 'dark' && projectListCss.darkModeProjectBackground]}>
             <div css={projectListCss.mainImageWrapper}>
               <Image src={project.mainImage} fill sizes="100%" alt="project main image" style={{ objectFit: 'cover' }} />
             </div>
 
-            <div css={projectListCss.projectTab}>{project.team}</div>
+            <div css={[projectListCss.projectTab, themeMode === 'dark' && projectListCss.darkModeProjectBackground]}>
+              <span>{project.team}</span>
+            </div>
 
             <div css={projectListCss.titleWrapper}>
               {project.logo && (
@@ -25,7 +30,7 @@ export default function ProjectList() {
                   <Image src={project.logo} fill sizes="100%" alt="project logo" />
                 </div>
               )}
-              <p css={projectListCss.projectTitle}>{project.title}</p>
+              <p css={[projectListCss.projectTitle, themeMode === 'dark' && darkModeCss.darkModeInvertColor]}>{project.title}</p>
             </div>
 
             <div css={projectListCss.skillList}>

@@ -34,6 +34,8 @@ export const pcProjectCss = {
     .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
+
+      background: ${theme.colors.mainGray};
     }
 
     /* 페이지네이션 아이템 상태 */
@@ -65,6 +67,11 @@ export const pcProjectCss = {
     &:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     }
+  `,
+
+  darkModeProjectBackground: css`
+    background: ${theme.colors.mainBeige};
+    color: ${theme.colors.mainLightBlack};
   `,
 
   mainImageWrapper: css`

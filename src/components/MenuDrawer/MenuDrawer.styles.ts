@@ -35,7 +35,10 @@ export const menuDrawerCss = {
     padding: 10px 0;
 
     border-bottom: 1px solid ${theme.colors.mainLightGray};
+  `,
 
+  label: css`
+    color: ${theme.colors.mainLightBlack};
     font-size: 16px;
     font-weight: 700;
   `,

@@ -7,7 +7,7 @@ export const logos = [
   { id: 6, src: '/assets/images/logos/HTML-logo.png', alt: 'HTML Logo' },
   { id: 7, src: '/assets/images/logos/CSS-logo.png', alt: 'CSS Logo' },
   { id: 8, src: '/assets/images/logos/figma-logo.png', alt: 'Figma Logo' },
-  { id: 9, src: '/assets/images/logos/chakra-logo.jpg', alt: 'Chakra UI Logo' },
+  { id: 9, src: '/assets/images/logos/chakra-logo.png', alt: 'Chakra UI Logo' },
   { id: 10, src: '/assets/images/logos/github-logo.svg', alt: 'GitHub Logo' },
   { id: 11, src: '/assets/images/logos/gitbook-logo.svg', alt: 'GitBook Logo' },
   { id: 12, src: '/assets/images/logos/notion-logo.svg', alt: 'Notion Logo' },

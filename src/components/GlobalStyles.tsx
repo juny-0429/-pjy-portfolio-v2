@@ -31,11 +31,19 @@ export default function GlobalStyles() {
         body[data-theme-mode='dark'] {
           background: ${theme.colors.mainLightBlack};
           color: ${theme.colors.white};
+
+          svg {
+            color: ${theme.colors.white};
+          }
         }
 
         body[data-theme-mode='light'] {
           background: ${theme.colors.white};
           color: ${theme.colors.mainLightBlack};
+
+          svg {
+            color: ${theme.colors.mainLightBlack};
+          }
         }
       `}
     />

@@ -20,7 +20,7 @@ export const footerCss = {
     height: 3px;
 
     border-radius: 99px;
-    background: ${theme.colors.mainLightBlack};
+    background: ${theme.colors.mainGray} !important;
 
     ${theme.media.pc} {
       width: calc(100% - 200px);
@@ -45,7 +45,7 @@ export const footerCss = {
   `,
 
   copyLight: css`
-    color: ${theme.colors.mainLightBlack};
+    color: ${theme.colors.mainGray};
     white-space: pre-wrap;
     font-size: 15px;
     font-weight: 300;

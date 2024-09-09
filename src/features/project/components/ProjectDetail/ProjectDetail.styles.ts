@@ -95,7 +95,10 @@ export const projectDetailCss = {
 
     ${theme.media.pc} {
       gap: 10px;
-      ${sizes.badgeSize[45]}
+
+      & > div {
+        ${sizes.badgeSize[30]};
+      }
     }
   `,
 
@@ -186,7 +189,7 @@ export const projectDetailCss = {
     align-items: center;
     gap: 10px;
 
-    color: ${theme.colors.mainDeepBlue};
+    color: ${theme.colors.mainBlue};
   `,
 
   sectionIcon: css`
@@ -194,6 +197,7 @@ export const projectDetailCss = {
     height: 16px;
     transform: rotate(180deg);
     stroke-width: 3px;
+    stroke: ${theme.colors.mainBlue};
 
     ${theme.media.pc} {
       width: 24px;

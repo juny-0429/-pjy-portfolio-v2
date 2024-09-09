@@ -55,7 +55,7 @@ export const progressBarCss = {
     position: absolute;
     top: 0;
     left: 50%;
-    width: 2px;
+    width: 1px;
     height: 100%;
     border-radius: 99px;
     background: ${theme.colors.mainLightGray};
