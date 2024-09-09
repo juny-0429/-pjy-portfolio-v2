@@ -1,3 +1,4 @@
+import theme from '@/theme';
 import { css, keyframes } from '@emotion/react';
 
 const slideUp = keyframes`
@@ -25,21 +26,40 @@ const slideDown = keyframes`
 export const moreOptionMenuCss = {
   wrapper: css`
     position: fixed;
-    bottom: 15px;
+    bottom: 40px;
     right: 10px;
+    z-index: 101;
+
+    ${theme.media.pc} {
+      bottom: 20px;
+      right: 20px;
+    }
   `,
 
   moreOptionMenu: css`
-    margin: 5px;
+    ${theme.media.pc} {
+      width: 30px;
+      height: 30px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
   `,
 
   optionsContainer: css`
+    position: absolute;
+    bottom: 40px;
+    right: 0;
     display: none;
     flex-direction: column;
-    position: absolute;
-    bottom: 100%;
-    right: 0;
-    z-index: 10;
+    gap: 20px;
+
+    ${theme.media.pc} {
+      gap: 30px;
+      bottom: 50px;
+    }
   `,
 
   showOptions: css`

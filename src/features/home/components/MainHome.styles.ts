@@ -18,11 +18,18 @@ export const mainHomeCss = {
   wrapper: css`
     display: flex;
     flex-direction: column;
+
     align-items: center;
     gap: 33px;
     padding: 60px 0;
 
     ${commonCss.sectionMinHeight}
+
+    ${theme.media.pc} {
+      justify-content: center;
+      gap: 50px;
+      padding: 0;
+    }
   `,
 
   homeHeader: css`
@@ -30,6 +37,10 @@ export const mainHomeCss = {
     flex-direction: column;
     align-items: center;
     gap: 5px;
+
+    ${theme.media.pc} {
+      gap: 40px;
+    }
   `,
 
   headerSubTitle: css`
@@ -39,18 +50,42 @@ export const mainHomeCss = {
     color: ${theme.colors.mainLightGreen};
     font-size: 30px;
     font-weight: 700;
+
+    ${theme.media.pc} {
+      color: ${theme.colors.mainLightBlack};
+      font-size: 120px;
+      font-weight: 800;
+      letter-spacing: 10px;
+
+      border-bottom: 0px;
+    }
   `,
 
   headerTitle: css`
     font-size: 50px;
     font-weight: 800;
+
+    ${theme.media.pc} {
+      font-size: 120px;
+      letter-spacing: 10px;
+    }
+  `,
+
+  content: css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
   `,
 
   introductionWrapper: css`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+
+    ${theme.media.pc} {
+      gap: 10px;
+    }
   `,
 
   introduction: css`
@@ -63,9 +98,19 @@ export const mainHomeCss = {
     strong {
       font-weight: 700;
     }
+
+    ${theme.media.pc} {
+      font-size: 25px;
+      font-weight: 300px;
+    }
   `,
 
-  profileImage: css`
+  profileImageWrapper: css`
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+
     border-radius: 10px;
   `,
 
@@ -76,5 +121,9 @@ export const mainHomeCss = {
     height: 30px;
     color: ${theme.colors.mainGray};
     animation: ${bounce} 1.5s infinite;
+
+    ${theme.media.pc} {
+      bottom: 20px;
+    }
   `,
 };

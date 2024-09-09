@@ -7,6 +7,7 @@ export const careerItemCss = {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    width: 100%;
   `,
 
   titleWrapper: css`
@@ -15,6 +16,7 @@ export const careerItemCss = {
     align-items: center;
     padding: 4px 10px;
     width: 100%;
+    box-sizing: border-box;
 
     border-left: 3px solid ${theme.colors.mainDeepBlue};
   `,

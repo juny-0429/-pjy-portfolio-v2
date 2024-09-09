@@ -6,16 +6,20 @@ export default function LogoSlider() {
   return (
     <div css={logoSliderCss.logoList}>
       <div css={logoSliderCss.logos}>
-        <div css={logoSliderCss.logoSlide}>
+        <ul css={logoSliderCss.logoSlide}>
           {logos.map((logo) => (
-            <Image key={logo.id} src={logo.src} style={{ marginLeft: '50px' }} width={30} height={30} alt={logo.alt} />
+            <li key={logo.id} css={logoSliderCss.logo}>
+              <Image src={logo.src} fill sizes="100%" alt={logo.alt} />
+            </li>
           ))}
-        </div>
-        <div css={logoSliderCss.logoSlide}>
+        </ul>
+        <ul css={logoSliderCss.logoSlide}>
           {logos.map((logo) => (
-            <Image key={logo.id} src={logo.src} style={{ marginLeft: '50px' }} width={30} height={30} alt={logo.alt} />
+            <li key={logo.id} css={logoSliderCss.logo}>
+              <Image src={logo.src} fill sizes="100%" alt={logo.alt} />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

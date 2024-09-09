@@ -1,4 +1,4 @@
-export type SkillType = 'HTML' | 'CSS' | 'SCSS' | 'REACT' | 'NEXT' | 'VUE' | 'JAVA' | 'SPRING BOOT' | 'RESTful' | 'ORACLE' | 'MUI' | 'FIGMA' | 'GITHUB' | 'GITBOOK' | 'NOTION' | 'TYPESCRIPT' | 'JPA';
+export type SkillType = 'HTML' | 'CSS' | 'SCSS' | 'REACT' | 'NEXT' | 'VUE' | 'JAVA' | 'SPRING' | 'RESTful' | 'ORACLE' | 'MUI' | 'FIGMA' | 'GITHUB' | 'GITBOOK' | 'NOTION' | 'TYPESCRIPT' | 'JPA';
 
 export type SkillColor =
   | 'HTML_COLOR'
@@ -8,7 +8,7 @@ export type SkillColor =
   | 'NEXT_COLOR'
   | 'VUE_COLOR'
   | 'JAVA_COLOR'
-  | 'SPRING_BOOT_COLOR'
+  | 'SPRING_COLOR'
   | 'RESTful_COLOR'
   | 'ORACLE_COLOR'
   | 'MUI_COLOR'
@@ -27,7 +27,7 @@ export const skillColorMap: { [key in SkillType]: SkillColor } = {
   NEXT: 'NEXT_COLOR',
   VUE: 'VUE_COLOR',
   JAVA: 'JAVA_COLOR',
-  'SPRING BOOT': 'SPRING_BOOT_COLOR',
+  SPRING: 'SPRING_COLOR',
   RESTful: 'RESTful_COLOR',
   ORACLE: 'ORACLE_COLOR',
   MUI: 'MUI_COLOR',

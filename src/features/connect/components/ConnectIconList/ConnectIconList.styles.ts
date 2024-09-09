@@ -1,3 +1,5 @@
+import { commonCss } from '@/styles/common.styles';
+import theme from '@/theme';
 import { css, keyframes } from '@emotion/react';
 
 const bounceAnimation = keyframes`
@@ -41,6 +43,24 @@ export const connectIconListCss = {
       animation-delay: 3s;
       animation-duration: 4s;
       animation-iteration-count: infinite;
+    }
+
+    ${theme.media.pc} {
+      justify-content: space-between;
+      width: 40%;
+      padding: 100px 0;
+    }
+  `,
+
+  connectIcon: css`
+    color: ${theme.colors.mainLightBlack};
+    width: 40px;
+    height: 40px;
+
+    ${theme.media.pc} {
+      width: 60px;
+      height: 60px;
+      ${commonCss.hoverBounce}
     }
   `,
 };

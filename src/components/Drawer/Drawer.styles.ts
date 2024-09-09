@@ -57,12 +57,13 @@ export const drawerCss = {
 
   drawerOverlay: css`
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
   `,
 
   open: css`
@@ -76,6 +77,10 @@ export const drawerCss = {
     align-items: center;
     width: 100%;
     height: 24px;
+
+    svg {
+      stroke-width: 1px;
+    }
   `,
 
   title: css`

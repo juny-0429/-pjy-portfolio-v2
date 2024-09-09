@@ -1,21 +1,7 @@
 import theme from '@/theme';
 import { css } from '@emotion/react';
 
-export const commonCss = {
-  fullPage: css`
-    /* header: 54px, footer: 105px */
-    min-height: calc(100dvh - 54px - 105px);
-    padding: 0 44px;
-
-    /* TODO: 다크 모드시 글자 색상 설정 하기  */
-    color: ${theme.colors.mainLightBlack};
-
-    ${theme.media.pc} {
-      /* header: 61px */
-      min-height: calc(100dvh - 61px);
-    }
-  `,
-
+export const scrollbarCss = {
   noScroll: css`
     ::-webkit-scrollbar {
       display: none;
@@ -24,8 +10,34 @@ export const commonCss = {
 
   scrollbar: css`
     &::-webkit-scrollbar {
+      display: block;
+      width: 10px;
+      height: 10px;
+
+      background: transparent;
     }
     &::-webkit-scrollbar-thumb {
+      background: ${theme.colors.mainLightGreen};
+      border-radius: 99px;
+      background-clip: padding-box;
+      border: 2px solid transparent;
+    }
+  `,
+};
+
+export const commonCss = {
+  fullPage: css`
+    min-height: calc(100dvh - 54px - 105px);
+    padding: 0 44px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    /* TODO: 다크 모드시 글자 색상 설정 하기  */
+    color: ${theme.colors.mainLightBlack};
+
+    ${theme.media.pc} {
+      min-height: calc(100dvh - 82px - 105px);
+      padding: 0 100px;
     }
   `,
 
@@ -46,6 +58,44 @@ export const commonCss = {
   `,
 
   sectionMinHeight: css`
-    min-height: 100dvh;
+    min-height: calc(100dvh - 54px);
+
+    ${theme.media.pc} {
+      min-height: calc(100dvh - 81px);
+    }
+  `,
+
+  onlyMobileVisible: css`
+    ${theme.media.pc} {
+      display: none;
+    }
+  `,
+
+  onlyPcVisibleBlock: css`
+    display: none;
+
+    ${theme.media.pc} {
+      display: block;
+    }
+  `,
+
+  onlyPcVisibleFlex: css`
+    display: none;
+
+    ${theme.media.pc} {
+      display: flex;
+    }
+  `,
+
+  hoverBounce: css`
+    &:hover {
+      color: ${theme.colors.mainGreen};
+      stroke: ${theme.colors.mainGreen};
+
+      transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+      transform: scale(1.2);
+    }
   `,
 };

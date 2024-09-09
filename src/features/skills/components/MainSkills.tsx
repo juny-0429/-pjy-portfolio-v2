@@ -5,7 +5,7 @@ import LogoSlider from './LogoSlider/LogoSlider';
 
 export default function MainSkills() {
   return (
-    <div css={mainSkillsCss.wrapper}>
+    <section css={mainSkillsCss.wrapper}>
       <LogoSlider />
 
       <div css={mainSkillsCss.skillCategoryList}>
@@ -18,18 +18,20 @@ export default function MainSkills() {
 
           return (
             <div key={index} css={[mainSkillsCss.skillCategoryWrapper, colorStyle]}>
-              <p css={[mainSkillsCss.skillCategoryTitle, { color: colorStyle.color }]}>{item.category}</p>
+              <h3 css={[mainSkillsCss.skillCategoryTitle, { color: colorStyle.color }]}>{item.category}</h3>
 
-              {item.skills.map((skill, skillIndex) => (
-                <div key={skillIndex} css={mainSkillsCss.skillWrapper}>
-                  <p css={mainSkillsCss.skillLabel}>{skill.label}</p>
-                  <p css={mainSkillsCss.skillDescription}>{skill.description}</p>
-                </div>
-              ))}
+              <ul css={mainSkillsCss.skillList}>
+                {item.skills.map((skill, skillIndex) => (
+                  <li key={skillIndex} css={mainSkillsCss.skillWrapper}>
+                    <p css={mainSkillsCss.skillLabel}>{skill.label}</p>
+                    <p css={mainSkillsCss.skillDescription}>{skill.description}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }

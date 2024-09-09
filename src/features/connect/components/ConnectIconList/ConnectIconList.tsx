@@ -1,15 +1,17 @@
-import theme from '@/theme';
+import Link from 'next/link';
 import { connectList } from '../../data/ connect.data';
 import { connectIconListCss } from './ConnectIconList.styles';
 
 export default function ConnectIconList() {
   return (
-    <div css={connectIconListCss.connectList}>
+    <ul css={connectIconListCss.connectList}>
       {connectList.map((item) => (
-        <a href={item.url} target="_blank" rel="noopener noreferrer" key={item.label}>
-          <item.icon width={40} height={40} color={theme.colors.mainLightBlack} />
-        </a>
+        <Link href={item.url} target="_blank" rel="noopener noreferrer" key={item.label}>
+          <li>
+            <item.icon css={connectIconListCss.connectIcon} />
+          </li>
+        </Link>
       ))}
-    </div>
+    </ul>
   );
 }

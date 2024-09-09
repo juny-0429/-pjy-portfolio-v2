@@ -1,18 +1,18 @@
 import { PropsWithChildren } from 'react';
-import Header from '../Header/Header';
 import { commonCss } from '@/styles/common.styles';
-import Footer from '../Footer/Footer';
-import MoreOptionMenu from '../MoreOptionMenu/MoreOptionMenu';
-import SidePagination from '../SidePagination/SidePagination';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
+import SidePagination from '@/components/SidePagination/SidePagination';
+import MoreOptionMenu from '@/components/MoreOptionMenu/MoreOptionMenu';
 
 export default function AppLayout({ children }: PropsWithChildren) {
   return (
     <>
       <Header />
       <main css={commonCss.fullPage}>{children}</main>
+      <Footer />
       <SidePagination />
       <MoreOptionMenu />
-      <Footer />
     </>
   );
 }
