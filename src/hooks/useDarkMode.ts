@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useRecoilState } from 'recoil';
+import { useEffect } from 'react';
+import { themeModeState } from '@/atoms/darkMode';
 
 export type ThemeMode = 'light' | 'dark';
 
 export const useDarkMode = () => {
-  const [themeMode, setThemeMode] = useState<ThemeMode>('light');
+  const [themeMode, setThemeMode] = useRecoilState(themeModeState);
 
   useEffect(() => {
     const localThemeMode = window.localStorage.getItem('themeMode') as ThemeMode | null;
