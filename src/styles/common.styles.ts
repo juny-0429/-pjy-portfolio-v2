@@ -32,8 +32,6 @@ export const commonCss = {
     overflow-x: hidden;
     overflow-y: auto;
 
-    ${scrollbarCss.noScroll}
-
     /* TODO: 다크 모드시 글자 색상 설정 하기  */
     color: ${theme.colors.mainLightBlack};
 

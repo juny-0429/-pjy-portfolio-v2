@@ -28,6 +28,7 @@ export const moreOptionMenuCss = {
     position: fixed;
     bottom: 40px;
     right: 10px;
+    z-index: 101;
 
     ${theme.media.pc} {
       bottom: 20px;
@@ -54,7 +55,6 @@ export const moreOptionMenuCss = {
     display: none;
     flex-direction: column;
     gap: 20px;
-    z-index: 10;
 
     ${theme.media.pc} {
       gap: 30px;

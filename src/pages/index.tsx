@@ -6,6 +6,8 @@ import MainConnect from '@/features/connect/components/MainConnect';
 import MainCareer from '@/features/career/components/MainCareer';
 import MainProject from '@/features/project/components/MainProject';
 import { useScrollRestoration } from '@/hooks/useScrollRestoration';
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Home() {
   useScrollRestoration('index');
@@ -33,3 +35,11 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale || 'ko', ['common', 'multiLanguage'])),
+    },
+  };
+};
