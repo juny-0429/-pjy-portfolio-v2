@@ -2,12 +2,14 @@ import { useState } from 'react';
 import FeatherIcons from '@/theme/featherIcons';
 import { moreOptionMenuCss } from './MoreOptionMenu.styles';
 import { animateScroll as scroll } from 'react-scroll';
+import { useDarkMode } from '@/hooks/useDarkMode';
 import MultiLanguageMenu from './MultiLanguageMenu/MultiLanguageMenu';
-import { commonCss } from '@/styles/common.styles';
 
 export default function MoreOptionMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDisplayed, setIsDisplayed] = useState(false);
+
+  const { themeMode, toggleThemeMode } = useDarkMode();
 
   const onMoreToggle = () => {
     if (!isOpen) {
@@ -37,8 +39,8 @@ export default function MoreOptionMenu() {
         <MultiLanguageMenu />
 
         {/* 다크 모드 */}
-        <button type="button" css={[moreOptionMenuCss.moreOptionMenu, commonCss.onlyMobileVisible]}>
-          <FeatherIcons.Sun />
+        <button type="button" css={moreOptionMenuCss.moreOptionMenu} onClick={toggleThemeMode}>
+          {themeMode === 'dark' ? <FeatherIcons.Moon /> : <FeatherIcons.Sun />}
         </button>
 
         {/* 최상단으로 이동하기 */}

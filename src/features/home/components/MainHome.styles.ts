@@ -50,15 +50,12 @@ export const mainHomeCss = {
     color: ${theme.colors.mainLightGreen};
     font-size: 30px;
     font-weight: 700;
+  `,
 
-    ${theme.media.pc} {
-      color: ${theme.colors.mainLightBlack};
-      font-size: 120px;
-      font-weight: 800;
-      letter-spacing: 10px;
-
-      border-bottom: 0px;
-    }
+  pcHeaderSubTitle: css`
+    font-size: 120px;
+    font-weight: 800;
+    letter-spacing: 10px;
   `,
 
   headerTitle: css`

@@ -18,11 +18,11 @@ export const careerItemCss = {
     width: 100%;
     box-sizing: border-box;
 
-    border-left: 3px solid ${theme.colors.mainDeepBlue};
+    border-left: 3px solid ${theme.colors.mainBlue};
   `,
 
   title: css`
-    color: ${theme.colors.mainDeepBlue};
+    color: ${theme.colors.mainBlue};
     font-size: 24px;
     font-weight: 700;
     line-height: 120%;

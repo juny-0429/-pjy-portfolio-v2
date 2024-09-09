@@ -9,7 +9,7 @@ export default function MainHome() {
     <section css={mainHomeCss.wrapper}>
       <div css={mainHomeCss.homeHeader}>
         <p css={[mainHomeCss.headerSubTitle, commonCss.onlyMobileVisible]}>Front-End</p>
-        <p css={[mainHomeCss.headerSubTitle, commonCss.onlyPcVisibleBlock]}>PJY</p>
+        <p css={[mainHomeCss.pcHeaderSubTitle, commonCss.onlyPcVisibleBlock]}>PJY</p>
         <p css={mainHomeCss.headerTitle}>PORTFOLIO</p>
       </div>
 

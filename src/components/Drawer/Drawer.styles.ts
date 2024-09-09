@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import theme from '@/theme';
 import { css } from '@emotion/react';
 
 export const drawerDirectionCss = {
@@ -84,6 +85,7 @@ export const drawerCss = {
   `,
 
   title: css`
+    color: ${theme.colors.mainLightBlack};
     font-size: 20px;
     font-weight: 300;
   `,
@@ -94,6 +96,10 @@ export const drawerCss = {
     right: 0;
     width: 24px;
     height: 24px;
+
+    svg {
+      color: ${theme.colors.mainLightBlack} !important;
+    }
   `,
 
   drawerContent: css`

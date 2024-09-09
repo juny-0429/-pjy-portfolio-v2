@@ -13,7 +13,7 @@ export default function CareerItem({ title, logo, date, description, children }:
   return (
     <div css={careerItemCss.wrapper}>
       <div css={careerItemCss.titleWrapper}>
-        <p css={careerItemCss.title}>{title}</p>
+        <span css={careerItemCss.title}>{title}</span>
 
         <div css={careerItemCss.logoWrapper}>
           <Image src={logo} width={30} height={30} alt="career logo" />

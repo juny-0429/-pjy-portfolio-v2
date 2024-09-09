@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { projectHeaderCss } from './ProjectHeader.styles';
 import theme from '@/theme';
 import FeatherIcons from '@/theme/featherIcons';
-import { commonCss } from '@/styles/common.styles';
+import { commonCss, darkModeCss } from '@/styles/common.styles';
+import { useDarkMode } from '@/hooks/useDarkMode';
 
 interface Props {
   date: string;
@@ -11,8 +12,10 @@ interface Props {
 }
 
 export default function ProjectHeader({ date, title, linkList }: Props) {
+  const { themeMode } = useDarkMode();
+
   return (
-    <header css={projectHeaderCss.header}>
+    <header css={[projectHeaderCss.header, themeMode === 'dark' && darkModeCss.darkModeStyle]}>
       <Link href="/" css={projectHeaderCss.backIconWrapper}>
         <FeatherIcons.ChevronLeft />
       </Link>

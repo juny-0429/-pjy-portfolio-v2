@@ -2,10 +2,9 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="ko">
+    <Html lang="ko" suppressHydrationWarning>
       <Head />
-      <link rel="icon" href="/favicon.ico" />
-      <body>
+      <body suppressHydrationWarning>
         <Main />
         <NextScript />
       </body>

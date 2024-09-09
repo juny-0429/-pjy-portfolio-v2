@@ -34,7 +34,9 @@ export const archivingItemCss = {
   titleIcon: css`
     width: 24px;
     height: 24px;
-    color: ${theme.colors.mainLightBlack};
+
+    color: ${theme.colors.mainLightBlack} !important;
+    fill: ${theme.colors.mainLightBlack};
 
     ${theme.media.pc} {
       width: 30px;
@@ -46,6 +48,8 @@ export const archivingItemCss = {
     font-size: 15px;
     font-weight: 600;
 
+    color: ${theme.colors.mainLightBlack};
+
     ${theme.media.pc} {
       font-size: 24px;
     }
@@ -55,6 +59,8 @@ export const archivingItemCss = {
     flex: 1;
     font-size: 12px;
     font-weight: 300;
+
+    color: ${theme.colors.mainLightBlack};
 
     ${theme.media.pc} {
       font-size: 16px;
@@ -92,6 +98,8 @@ export const archivingItemCss = {
   linkIcon: css`
     width: 15px;
     height: 15px;
+
+    stroke: ${theme.colors.mainLightBlack};
 
     ${theme.media.pc} {
       width: 20px;

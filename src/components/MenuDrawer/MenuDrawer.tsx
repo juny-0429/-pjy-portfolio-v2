@@ -8,6 +8,8 @@ import { MainMenu } from '@/types/menu.types';
 import { useRecoilState } from 'recoil';
 import { activeSectionState } from '@/atoms/sectionScroll';
 import { Interpolation, Theme } from '@emotion/react';
+import { useDarkMode } from '@/hooks/useDarkMode';
+import { darkModeCss } from '@/styles/common.styles';
 
 interface Props {
   cssStyle?: Interpolation<Theme>;
@@ -16,6 +18,7 @@ interface Props {
 export default function MenuDrawer({ cssStyle }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [_, setActiveSection] = useRecoilState<MainMenu>(activeSectionState);
+  const { themeMode } = useDarkMode();
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
@@ -29,7 +32,7 @@ export default function MenuDrawer({ cssStyle }: Props) {
   return (
     <>
       <button type="button" css={[menuDrawerCss.menuButton, cssStyle]} onClick={toggleDrawer}>
-        <FeatherIcons.Menu css={menuDrawerCss.menuIcon} />
+        <FeatherIcons.Menu css={[menuDrawerCss.menuIcon, themeMode === 'dark' && darkModeCss.darkModeColor]} />
       </button>
 
       <Drawer title="section menu" direction="right" isOpen={isOpen} onToggle={toggleDrawer}>
@@ -37,7 +40,9 @@ export default function MenuDrawer({ cssStyle }: Props) {
           <ul css={menuDrawerCss.menuList}>
             {mainMenu.map((menu) => (
               <Link key={menu} to={menu} spy={true} smooth={true} duration={500} css={menuDrawerCss.menuDrawerItem} onSetActive={() => handleMenuClick(menu)}>
-                <li>{menu}</li>
+                <li>
+                  <span css={menuDrawerCss.label}>{menu}</span>
+                </li>
               </Link>
             ))}
           </ul>

@@ -1,9 +1,9 @@
-import colors from './colors';
 import media from './media';
+import colors from './colors';
 
 const theme = {
-  colors,
   media,
+  colors,
 };
 
 export default theme;

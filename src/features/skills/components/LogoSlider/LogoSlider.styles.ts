@@ -24,7 +24,7 @@ export const logoSliderCss = {
     width: 100vw;
     overflow: hidden;
     white-space: nowrap;
-    background: white;
+    background: ${theme.colors.white};
 
     &::before,
     &::after {
@@ -52,6 +52,18 @@ export const logoSliderCss = {
       &::after {
         width: 50px;
       }
+    }
+  `,
+
+  darkModeLogos: css`
+    background: ${theme.colors.mainLightBlack};
+
+    &::before {
+      background: linear-gradient(to right, ${theme.colors.mainLightBlack} 0%, transparent 100%);
+    }
+
+    &::after {
+      background: linear-gradient(to left, ${theme.colors.mainLightBlack} 0%, transparent 100%);
     }
   `,
 

@@ -25,15 +25,31 @@ export const scrollbarCss = {
   `,
 };
 
+export const darkModeCss = {
+  darkModeStyle: css`
+    background: ${theme.colors.mainLightBlack};
+    color: ${theme.colors.white};
+  `,
+
+  darkModeColor: css`
+    color: ${theme.colors.white};
+  `,
+
+  darkModeInvertColor: css`
+    color: ${theme.colors.mainLightBlack};
+  `,
+
+  darkModeBackground: css`
+    background: ${theme.colors.mainLightBlack};
+  `,
+};
+
 export const commonCss = {
   fullPage: css`
     min-height: calc(100dvh - 54px - 105px);
     padding: 0 44px;
     overflow-x: hidden;
     overflow-y: auto;
-
-    /* TODO: 다크 모드시 글자 색상 설정 하기  */
-    color: ${theme.colors.mainLightBlack};
 
     ${theme.media.pc} {
       min-height: calc(100dvh - 82px - 105px);
