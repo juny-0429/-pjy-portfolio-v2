@@ -4,7 +4,6 @@ import { moreOptionMenuCss } from './MoreOptionMenu.styles';
 import { animateScroll as scroll } from 'react-scroll';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import MultiLanguageMenu from './MultiLanguageMenu/MultiLanguageMenu';
-import { commonCss } from '@/styles/common.styles';
 
 export default function MoreOptionMenu() {
   const [isOpen, setIsOpen] = useState(false);
