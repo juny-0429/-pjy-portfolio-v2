@@ -4,7 +4,8 @@ import { css } from '@emotion/react';
 export const multiLanguageMenuCss = {
   multilingualList: css`
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 30px;
   `,
 

@@ -3,6 +3,7 @@ import FeatherIcons from '@/theme/featherIcons';
 import { moreOptionMenuCss } from './MoreOptionMenu.styles';
 import { animateScroll as scroll } from 'react-scroll';
 import MultiLanguageMenu from './MultiLanguageMenu/MultiLanguageMenu';
+import { commonCss } from '@/styles/common.styles';
 
 export default function MoreOptionMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,12 +32,15 @@ export default function MoreOptionMenu() {
         <button type="button" css={moreOptionMenuCss.moreOptionMenu}>
           <FeatherIcons.Mail />
         </button>
+
         {/* 다국어 */}
         <MultiLanguageMenu />
+
         {/* 다크 모드 */}
-        <button type="button" css={moreOptionMenuCss.moreOptionMenu}>
+        <button type="button" css={[moreOptionMenuCss.moreOptionMenu, commonCss.onlyMobileVisible]}>
           <FeatherIcons.Sun />
         </button>
+
         {/* 최상단으로 이동하기 */}
         <button type="button" css={moreOptionMenuCss.moreOptionMenu} onClick={() => scroll.scrollToTop()}>
           <FeatherIcons.ChevronsUp />

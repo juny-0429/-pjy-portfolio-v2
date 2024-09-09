@@ -7,6 +7,7 @@ import { multiLanguageMenuCss } from './MultiLanguageMenu.styles';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import { localeToFlagCodeMap } from '@/data/localeToFlagCodeMap.data';
 
 export default function MultiLanguageMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,15 +22,16 @@ export default function MultiLanguageMenu() {
       <button type="button" css={moreOptionMenuCss.moreOptionMenu} onClick={toggleDrawer}>
         <FeatherIcons.Globe />
       </button>
+
       <Drawer title={t('title')} direction="bottom" isOpen={isOpen} onToggle={toggleDrawer}>
         <nav>
           <ul css={multiLanguageMenuCss.multilingualList}>
             {locales &&
               locales.map((language) => (
-                <li key={language} css={multiLanguageMenuCss.multilingualItem}>
-                  <Link href="/" locale={language}>
+                <li key={language}>
+                  <Link href="/" locale={language} css={multiLanguageMenuCss.multilingualItem}>
                     <div css={multiLanguageMenuCss.flagWrapper}>
-                      <Flag code={language} css={multiLanguageMenuCss.flagIcon} />
+                      <Flag code={localeToFlagCodeMap[language]} css={multiLanguageMenuCss.flagIcon} />
                     </div>
                     <span css={multiLanguageMenuCss.label}>{language === 'ko' ? t('koreanLanguage') : t('englishLanguage')}</span>
                   </Link>
