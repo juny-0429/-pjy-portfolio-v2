@@ -26,7 +26,7 @@ export default function HeaderMenu({ cssStyle }: Props) {
             spy={true}
             smooth={true}
             duration={500}
-            css={[headerMenuCss.menuItem, activeSection === menu && headerMenuCss.activeItem, themeMode === 'dark' && darkModeCss.darkModeColor]}
+            css={[headerMenuCss.menuItem, themeMode === 'dark' && darkModeCss.darkModeColor, activeSection === menu && headerMenuCss.activeItem]}
             onSetActive={() => setActiveSection(menu)}
           >
             <li>{menu}</li>

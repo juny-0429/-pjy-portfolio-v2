@@ -20,7 +20,7 @@ export const headerMenuCss = {
   `,
 
   activeItem: css`
-    color: ${theme.colors.mainLightGreen};
+    color: ${theme.colors.mainLightGreen} !important;
     font-weight: 800;
   `,
 };
