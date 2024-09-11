@@ -46,7 +46,23 @@ export const careerItemCss = {
   `,
 
   description: css`
+    color: ${theme.colors.mainDeepBlue};
+    white-space: pre-wrap;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 110%;
+  `,
+
+  contentList: css`
+    list-style: disc;
+    padding: 20px 0 0 15px;
+
+    li {
+      margin-bottom: 5px;
+      white-space: pre-wrap;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 140%;
+    }
   `,
 };

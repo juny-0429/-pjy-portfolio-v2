@@ -11,7 +11,7 @@ export const useCareerScroll = () => {
     offset: ['start end', 'end start'],
   });
 
-  const transformedProgress = useTransform(scrollYProgress, [0.35, 1], [0, 1]);
+  const transformedProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const scaleY = useSpring(transformedProgress, {
     stiffness: 100,
@@ -23,9 +23,9 @@ export const useCareerScroll = () => {
 
   const updateTextColors = (progress: number) => {
     const colorStages = [
-      { range: [0, 0.5], index: 0 },
-      { range: [0.5, 0.6], index: 1 },
-      { range: [0.7, 1], index: 2 },
+      { range: [0, 0.45], index: 0 },
+      { range: [0.5, 0.7], index: 1 },
+      { range: [0.75, 1], index: 2 },
     ];
 
     const newTextColors = textColors.map((_, _i) => theme.colors.mainLightGray);

@@ -14,7 +14,7 @@ export default function MainCareer() {
       {/* mobile */}
       <div css={[mainCareerCss.careerList, commonCss.onlyMobileVisible]}>
         {careerList.map((item, index) => (
-          <CareerItem key={index} title={item.title} logo={item.logo} date={item.date} description={item.description} />
+          <CareerItem key={index} title={item.title} logo={item.logo} date={item.date} description={item.description} content={item.content} />
         ))}
       </div>
 
@@ -48,18 +48,11 @@ export default function MainCareer() {
               <motion.div
                 key={index}
                 style={{
-                  gridColumn: column, // gridColumn 값 설정
-                  gridRow: row, // gridRow 값 설정
+                  gridColumn: column,
+                  gridRow: row,
                 }}
               >
-                <PcCareerItem
-                  index={index}
-                  title={item.title}
-                  logo={item.logo}
-                  date={item.date}
-                  description={item.description}
-                  textColor={textColors[index]} // 훅에서 전달된 텍스트 색상
-                />
+                <PcCareerItem index={index} title={item.title} logo={item.logo} date={item.date} description={item.description} content={item.content} textColor={textColors[index]} />
               </motion.div>
             );
           })}

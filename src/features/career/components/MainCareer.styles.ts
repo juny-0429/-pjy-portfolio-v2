@@ -8,7 +8,7 @@ export const mainCareerCss = {
     flex-direction: column;
     align-items: center;
     gap: 100px;
-    padding: 74px 0 0;
+    padding: 200px 0 0;
 
     ${commonCss.sectionMinHeight}
 
@@ -29,12 +29,14 @@ export const mainCareerCss = {
     flex-direction: column;
     align-items: flex-start;
     gap: 100px;
+    height: 100%;
 
     ${theme.media.pc} {
       position: relative;
 
       width: 100%;
-      height: calc(100dvh - 100px);
+      height: 2100px;
+      min-height: calc(100dvh - 100px);
     }
   `,
 

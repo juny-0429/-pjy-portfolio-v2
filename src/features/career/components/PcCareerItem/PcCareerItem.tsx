@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
-import { PropsWithChildren } from 'react';
 import { pcCareerItemCss } from './PcCareerItem.styles';
+import theme from '@/theme';
 
 interface Props {
   index: number;
@@ -8,10 +8,11 @@ interface Props {
   logo: StaticImageData;
   date: string;
   description: string;
+  content: string[];
   textColor: string;
 }
 
-export default function PcCareerItem({ index, title, logo, date, description, children, textColor }: PropsWithChildren<Props>) {
+export default function PcCareerItem({ index, title, logo, date, description, content, textColor }: Props) {
   const column = (index % 2) + 1;
   const row = index + 1;
 
@@ -30,9 +31,17 @@ export default function PcCareerItem({ index, title, logo, date, description, ch
       </div>
 
       {/* description */}
-      <p css={pcCareerItemCss.description}>{description}</p>
+      <p css={pcCareerItemCss.description} style={{ color: textColor }}>
+        {description}
+      </p>
 
-      {children}
+      <ul css={pcCareerItemCss.contentList}>
+        {content.map((item, index) => (
+          <li key={index} style={{ color: textColor === theme.colors.mainLightGreen ? theme.colors.mainLightBlack : theme.colors.mainLightGray }}>
+            {item}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
