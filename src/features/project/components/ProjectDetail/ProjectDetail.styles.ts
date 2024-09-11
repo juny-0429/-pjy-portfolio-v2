@@ -32,6 +32,7 @@ export const projectDetailCss = {
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
+    width: 100%;
 
     ${theme.media.pc} {
       gap: 50px;
@@ -138,11 +139,12 @@ export const projectDetailCss = {
   description: css`
     font-size: 14px;
     font-weight: 400;
-    line-height: 150%;
+    line-height: 140%;
 
     ${theme.media.pc} {
       font-size: 20px;
       line-height: 100%;
+      line-height: 140%;
     }
   `,
 
@@ -215,13 +217,32 @@ export const projectDetailCss = {
     }
   `,
 
+  detailSectionContentList: css`
+    list-style: disc;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 140%;
+    }
+
+    ${theme.media.pc} {
+      li {
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
+  `,
+
   detailSectionContent: css`
     font-size: 14px;
     font-weight: 400;
+    line-height: 140%;
 
     ${theme.media.pc} {
       font-size: 20px;
-      font-weight: 400;
     }
   `,
 };

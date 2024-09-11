@@ -105,7 +105,16 @@ export default function ProjectDetail() {
                       <FeatherIcons.Triangle css={projectDetailCss.sectionIcon} />
                       <h3 css={projectDetailCss.detailSectionTitle}>{menu.label}</h3>
                     </div>
-                    <p css={projectDetailCss.detailSectionContent}>{project.detail[menu.value as keyof typeof project.detail]}</p>
+
+                    {Array.isArray(project.detail[menu.value as keyof typeof project.detail]) ? (
+                      <ul css={projectDetailCss.detailSectionContentList}>
+                        {(project.detail[menu.value as keyof typeof project.detail] as string[]).map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p css={projectDetailCss.detailSectionContent}>{project.detail[menu.value as keyof typeof project.detail]}</p>
+                    )}
                   </section>
                 </Element>
               ))}
