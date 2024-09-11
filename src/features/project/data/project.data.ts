@@ -32,7 +32,7 @@ export const projectListData = [
     logo: PjyPortfolio2Logo,
     team: '개인',
     date: '24.08.19 ~ 24.08.09.10',
-    skills: ['NEXT', 'TYPESCRIPT', 'SCSS', 'RECOIL', 'REACT SCROLL', ' FIGMA', 'GITHUB'],
+    skills: ['NEXT', 'TYPESCRIPT', 'SCSS', 'RECOIL', 'REACTSCROLL', 'FIGMA', 'GITHUB'],
     link: [
       { LinkIcon: FeatherIcons.Monitor, url: '' },
       { LinkIcon: GithubIcon, url: 'https://github.com/juny-0429/pjy-portfolio-v2' },
@@ -54,7 +54,7 @@ export const projectListData = [
     logo: CarManagementAppLogo,
     team: '코드인디자인',
     date: '24.07.22 ~ 24.08.09',
-    skills: ['REACT', 'TYPESCRIPT', 'EMOTION', 'CHAKRA UI', 'REACT QUERY', 'RECOIL', 'FIGMA', 'GITHUB'],
+    skills: ['REACT', 'TYPESCRIPT', 'EMOTION', 'CHAKRA_UI', 'REACT_QUERY', 'RECOIL', 'FIGMA', 'GITHUB'],
     link: [
       { LinkIcon: '', url: '' },
       { LinkIcon: '', url: '' },
@@ -98,7 +98,7 @@ export const projectListData = [
     logo: RouterAdminLogo,
     team: '코드인디자인',
     date: '24.06.01 ~ 24.08.01',
-    skills: ['VUE', 'TYPESCRIPT', 'SCSS', 'CHART JS', 'TANSTACK TABLE', 'VUETIFY', 'PINIA', 'FIGMA', 'GITHUB'],
+    skills: ['VUE', 'TYPESCRIPT', 'SCSS', 'CHART_JS', 'TANSTACK_TABLE', 'VUETIFY', 'PINIA', 'FIGMA', 'GITHUB'],
     link: [
       { LinkIcon: '', url: '' },
       { LinkIcon: '', url: '' },
@@ -129,7 +129,7 @@ export const projectListData = [
     logo: ZoneLogo,
     team: '코드인디자인',
     date: '24.03.01 ~ 24.05.31',
-    skills: ['NEXT', 'RTK', 'AG GRID', 'CHAKRA UI', 'STORY BOOK', 'TYPESCRIPT', 'SWIPER', 'FIGMA', 'GITHUB'],
+    skills: ['NEXT', 'RTK', 'AG_GRID', 'CHAKRA_UI', 'STORYBOOK', 'TYPESCRIPT', 'SWIPER', 'FIGMA', 'GITHUB'],
     link: [{ LinkIcon: FeatherIcons.Monitor, url: 'https://z-one.kr/' }],
     Member: 3,
     description:
