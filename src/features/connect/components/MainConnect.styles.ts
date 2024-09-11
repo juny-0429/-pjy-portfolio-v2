@@ -30,8 +30,11 @@ export const mainConnectCss = {
 
   description: css`
     color: ${theme.colors.mainGray};
+    text-align: center;
+    white-space: pre-wrap;
     font-size: 24px;
     font-weight: 400;
+    line-height: 150%;
   `,
 
   connectWrapper: css`
