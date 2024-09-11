@@ -20,14 +20,14 @@ export default function Home() {
       <Element name="ABOUT">
         <MainAbout />
       </Element>
+      <Element name="CAREER">
+        <MainCareer />
+      </Element>
       <Element name="SKILLS">
         <MainSkills />
       </Element>
       <Element name="PROJECT">
         <MainProject />
-      </Element>
-      <Element name="CAREER">
-        <MainCareer />
       </Element>
       <Element name="CONNECT">
         <MainConnect />
