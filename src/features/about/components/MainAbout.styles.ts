@@ -73,9 +73,10 @@ export const mainAboutCss = {
   `,
 
   introduction: css`
+    white-space: pre-wrap;
     font-size: 13px;
     font-weight: 500;
-    line-height: 120%;
+    line-height: 140%;
 
     ${theme.media.pc} {
       font-size: 20px;
