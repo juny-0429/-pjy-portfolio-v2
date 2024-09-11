@@ -10,7 +10,7 @@ export default function MainCareer() {
   const { ref, textColors, scaleY, translateY } = useCareerScroll();
 
   return (
-    <section css={mainCareerCss.wrapper} ref={ref}>
+    <section css={mainCareerCss.wrapper}>
       {/* mobile */}
       <div css={[mainCareerCss.careerList, commonCss.onlyMobileVisible]}>
         {careerList.map((item, index) => (
@@ -21,7 +21,7 @@ export default function MainCareer() {
       {/* pc */}
       <h2 css={[mainCareerCss.title, commonCss.onlyPcVisibleFlex]}>CAREER</h2>
 
-      <div css={[mainCareerCss.careerList, commonCss.onlyPcVisibleFlex]}>
+      <div css={[mainCareerCss.careerList, commonCss.onlyPcVisibleFlex]} ref={ref}>
         {/* progress */}
         <div css={progressBarCss.backgroundBar} />
         <motion.div

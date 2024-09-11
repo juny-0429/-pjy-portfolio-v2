@@ -11,7 +11,7 @@ export const useCareerScroll = () => {
     offset: ['start end', 'end start'],
   });
 
-  const transformedProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const transformedProgress = useTransform(scrollYProgress, [0.2, 1], [0, 1]);
 
   const scaleY = useSpring(transformedProgress, {
     stiffness: 100,

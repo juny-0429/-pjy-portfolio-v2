@@ -13,8 +13,8 @@ export const mainCareerCss = {
     ${commonCss.sectionMinHeight}
 
     ${theme.media.pc} {
-      gap: 230px;
-      padding: 120px 0 0;
+      gap: 150px;
+      padding: 300px 0 0;
     }
   `,
 
