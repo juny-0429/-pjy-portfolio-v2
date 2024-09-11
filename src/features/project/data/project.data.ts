@@ -55,10 +55,6 @@ export const projectListData = [
     team: '코드인디자인',
     date: '24.07.22 ~ 24.08.09',
     skills: ['REACT', 'TYPESCRIPT', 'EMOTION', 'CHAKRA_UI', 'REACT_QUERY', 'RECOIL', 'FIGMA', 'GITHUB'],
-    link: [
-      { LinkIcon: '', url: '' },
-      { LinkIcon: '', url: '' },
-    ],
     Member: 4,
     description: '',
     detail: {
@@ -77,10 +73,6 @@ export const projectListData = [
     team: '코드인디자인',
     date: '24.07.01 ~ 24.07.05',
     skills: ['SOLAPI', 'NEXT', 'FIGMA', 'GITHUB'],
-    link: [
-      { LinkIcon: '', url: '' },
-      { LinkIcon: '', url: '' },
-    ],
     Member: 1,
     description: '',
     detail: {
@@ -99,10 +91,6 @@ export const projectListData = [
     team: '코드인디자인',
     date: '24.06.01 ~ 24.08.01',
     skills: ['VUE', 'TYPESCRIPT', 'SCSS', 'CHART_JS', 'TANSTACK_TABLE', 'VUETIFY', 'PINIA', 'FIGMA', 'GITHUB'],
-    link: [
-      { LinkIcon: '', url: '' },
-      { LinkIcon: '', url: '' },
-    ],
     Member: 2,
     description:
       'Typescript와 Sass(Scss)를 활용한 어드민 페이지 개발 프로젝트로, Pinia와 Tanstack Query를 통한 상태 관리, Vue Router를 사용한 라우팅, Tanstack Table과 Vuetify 기반의 UI 컴포넌트를 적용하여 구현되었습니다.',
@@ -175,10 +163,6 @@ export const projectListData = [
     team: '코드인디자인',
     date: '23.12.13 ~ 24.02.10 ',
     skills: ['VUE', 'STORYBOOK', 'FIGMA', 'GITHUB'],
-    link: [
-      { LinkIcon: '', url: '' },
-      { LinkIcon: '', url: '' },
-    ],
     Member: 1,
     description: '',
     detail: {

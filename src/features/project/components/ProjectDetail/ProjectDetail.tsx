@@ -73,13 +73,14 @@ export default function ProjectDetail() {
               <h2 css={projectDetailCss.infoTitle}>링크</h2>
               <nav>
                 <ul css={projectDetailCss.projectLinkList}>
-                  {project.link.map((link, index) => (
-                    <li key={index}>
-                      <Link href={link.url} target="_blank" rel="noopener noreferrer">
-                        <link.LinkIcon width={35} height={35} color={theme.colors.mainLightBlack} />
-                      </Link>
-                    </li>
-                  ))}
+                  {project.link &&
+                    project.link.map((link, index) => (
+                      <li key={index}>
+                        <Link href={link.url} target="_blank" rel="noopener noreferrer">
+                          <link.LinkIcon width={35} height={35} color={theme.colors.mainLightBlack} />
+                        </Link>
+                      </li>
+                    ))}
                 </ul>
               </nav>
             </section>

@@ -23,7 +23,7 @@ export const project: { detail: ProjectDetail } = {
 export const quickMenuList: { label: string; value: ProjectDetailMenu }[] = [
   { label: '프로젝트 정보', value: '프로젝트정보' },
   { label: '프로젝트 소개', value: '프로젝트소개' },
-  { label: '프로젝트 목적', value: '프로젝트목표' },
+  { label: '프로젝트 목표', value: '프로젝트목표' },
   { label: '나의 역할', value: '나의역할' },
   { label: '주요 이슈 및 해결 과정', value: '주요이슈및해결과정' },
   { label: '회고', value: '회고' },
