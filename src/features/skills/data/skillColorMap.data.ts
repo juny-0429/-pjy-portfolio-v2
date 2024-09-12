@@ -1,4 +1,38 @@
-export type SkillType = 'HTML' | 'CSS' | 'SCSS' | 'REACT' | 'NEXT' | 'VUE' | 'JAVA' | 'SPRING' | 'RESTful' | 'ORACLE' | 'MUI' | 'FIGMA' | 'GITHUB' | 'GITBOOK' | 'NOTION' | 'TYPESCRIPT' | 'JPA';
+export type SkillType =
+  | 'HTML'
+  | 'CSS'
+  | 'SCSS'
+  | 'REACT'
+  | 'NEXT'
+  | 'VUE'
+  | 'JAVA'
+  | 'SPRING'
+  | 'RESTful'
+  | 'ORACLE'
+  | 'MUI'
+  | 'FIGMA'
+  | 'GITHUB'
+  | 'GITBOOK'
+  | 'NOTION'
+  | 'TYPESCRIPT'
+  | 'JPA'
+  | 'AG_GRID'
+  | 'BOOTSTRAP'
+  | 'CHAKRA_UI'
+  | 'CHART_JS'
+  | 'EMOTION'
+  | 'PINIA'
+  | 'REACT_QUERY'
+  | 'REACTSCROLL'
+  | 'RECOIL'
+  | 'RTK'
+  | 'SASS'
+  | 'SOLAPI'
+  | 'STORYBOOK'
+  | 'SWIPER'
+  | 'TANSTACK_QUERY'
+  | 'TANSTACK_TABLE'
+  | 'VUETIFY';
 
 export type SkillColor =
   | 'HTML_COLOR'
@@ -17,7 +51,24 @@ export type SkillColor =
   | 'GITBOOK_COLOR'
   | 'NOTION_COLOR'
   | 'TYPESCRIPT_COLOR'
-  | 'JPA_COLOR';
+  | 'JPA_COLOR'
+  | 'AG_GRID_COLOR'
+  | 'BOOTSTRAP_COLOR'
+  | 'CHAKRA_UI_COLOR'
+  | 'CHART_JS_COLOR'
+  | 'EMOTION_COLOR'
+  | 'PINIA_COLOR'
+  | 'REACT_QUERY_COLOR'
+  | 'REACTSCROLL_COLOR'
+  | 'RECOIL_COLOR'
+  | 'RTK_COLOR'
+  | 'SASS_COLOR'
+  | 'SOLAPI_COLOR'
+  | 'STORYBOOK_COLOR'
+  | 'SWIPER_COLOR'
+  | 'TANSTACK_QUERY_COLOR'
+  | 'TANSTACK_TABLE_COLOR'
+  | 'VUETIFY_COLOR';
 
 export const skillColorMap: { [key in SkillType]: SkillColor } = {
   HTML: 'HTML_COLOR',
@@ -37,4 +88,21 @@ export const skillColorMap: { [key in SkillType]: SkillColor } = {
   NOTION: 'NOTION_COLOR',
   TYPESCRIPT: 'TYPESCRIPT_COLOR',
   JPA: 'JPA_COLOR',
+  AG_GRID: 'AG_GRID_COLOR',
+  BOOTSTRAP: 'BOOTSTRAP_COLOR',
+  CHAKRA_UI: 'CHAKRA_UI_COLOR',
+  CHART_JS: 'CHART_JS_COLOR',
+  EMOTION: 'EMOTION_COLOR',
+  PINIA: 'PINIA_COLOR',
+  REACT_QUERY: 'REACT_QUERY_COLOR',
+  REACTSCROLL: 'REACTSCROLL_COLOR',
+  RECOIL: 'RECOIL_COLOR',
+  RTK: 'RTK_COLOR',
+  SASS: 'SASS_COLOR',
+  SOLAPI: 'SOLAPI_COLOR',
+  STORYBOOK: 'STORYBOOK_COLOR',
+  SWIPER: 'SWIPER_COLOR',
+  TANSTACK_QUERY: 'TANSTACK_QUERY_COLOR',
+  TANSTACK_TABLE: 'TANSTACK_TABLE_COLOR',
+  VUETIFY: 'VUETIFY_COLOR',
 };

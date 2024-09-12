@@ -8,7 +8,7 @@ import { useDarkMode } from '@/hooks/useDarkMode';
 interface Props {
   date: string;
   title: string;
-  linkList: { LinkIcon: React.FC<React.SVGProps<SVGSVGElement>>; url: string }[];
+  linkList?: { LinkIcon: React.FC<React.SVGProps<SVGSVGElement>>; url: string }[];
 }
 
 export default function ProjectHeader({ date, title, linkList }: Props) {
@@ -25,17 +25,19 @@ export default function ProjectHeader({ date, title, linkList }: Props) {
         <h1 css={projectHeaderCss.title}>{title}</h1>
       </div>
 
-      <nav css={commonCss.onlyPcVisibleBlock}>
-        <ul css={projectHeaderCss.projectLinkList}>
-          {linkList.map((link, index) => (
-            <li key={index}>
-              <Link href={link.url} target="_blank" rel="noopener noreferrer">
-                <link.LinkIcon width={50} height={50} color={theme.colors.mainLightBlack} />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {linkList && (
+        <nav css={commonCss.onlyPcVisibleBlock}>
+          <ul css={projectHeaderCss.projectLinkList}>
+            {linkList.map((link, index) => (
+              <li key={index}>
+                <Link href={link.url} target="_blank" rel="noopener noreferrer">
+                  <link.LinkIcon width={50} height={50} color={theme.colors.mainLightBlack} />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }

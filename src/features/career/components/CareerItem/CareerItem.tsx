@@ -1,4 +1,3 @@
-import { PropsWithChildren } from 'react';
 import { careerItemCss } from './CareerItem.styles';
 import Image, { StaticImageData } from 'next/image';
 
@@ -7,9 +6,10 @@ interface Props {
   logo: StaticImageData;
   date: string;
   description: string;
+  content: string[];
 }
 
-export default function CareerItem({ title, logo, date, description, children }: PropsWithChildren<Props>) {
+export default function CareerItem({ title, logo, date, description, content }: Props) {
   return (
     <div css={careerItemCss.wrapper}>
       <div css={careerItemCss.titleWrapper}>
@@ -24,7 +24,11 @@ export default function CareerItem({ title, logo, date, description, children }:
 
       <p css={careerItemCss.description}>{description}</p>
 
-      {children}
+      <ul css={careerItemCss.contentList}>
+        {content.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }

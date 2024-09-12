@@ -73,13 +73,14 @@ export default function ProjectDetail() {
               <h2 css={projectDetailCss.infoTitle}>링크</h2>
               <nav>
                 <ul css={projectDetailCss.projectLinkList}>
-                  {project.link.map((link, index) => (
-                    <li key={index}>
-                      <Link href={link.url} target="_blank" rel="noopener noreferrer">
-                        <link.LinkIcon width={35} height={35} color={theme.colors.mainLightBlack} />
-                      </Link>
-                    </li>
-                  ))}
+                  {project.link &&
+                    project.link.map((link, index) => (
+                      <li key={index}>
+                        <Link href={link.url} target="_blank" rel="noopener noreferrer">
+                          <link.LinkIcon width={35} height={35} color={theme.colors.mainLightBlack} />
+                        </Link>
+                      </li>
+                    ))}
                 </ul>
               </nav>
             </section>
@@ -104,7 +105,16 @@ export default function ProjectDetail() {
                       <FeatherIcons.Triangle css={projectDetailCss.sectionIcon} />
                       <h3 css={projectDetailCss.detailSectionTitle}>{menu.label}</h3>
                     </div>
-                    <p css={projectDetailCss.detailSectionContent}>{project.detail[menu.value as keyof typeof project.detail]}</p>
+
+                    {Array.isArray(project.detail[menu.value as keyof typeof project.detail]) ? (
+                      <ul css={projectDetailCss.detailSectionContentList}>
+                        {(project.detail[menu.value as keyof typeof project.detail] as string[]).map((item, index) => (
+                          <li key={index}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p css={projectDetailCss.detailSectionContent}>{project.detail[menu.value as keyof typeof project.detail]}</p>
+                    )}
                   </section>
                 </Element>
               ))}

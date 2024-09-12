@@ -28,7 +28,24 @@ export type BadgeColor =
   | 'JPA_COLOR'
   | 'MUI_COLOR'
   | 'TYPESCRIPT_COLOR'
-  | 'GITHUB_COLOR';
+  | 'GITHUB_COLOR'
+  | 'AG_GRID_COLOR'
+  | 'BOOTSTRAP_COLOR'
+  | 'CHAKRA_UI_COLOR'
+  | 'CHART_JS_COLOR'
+  | 'EMOTION_COLOR'
+  | 'PINIA_COLOR'
+  | 'REACT_QUERY_COLOR'
+  | 'REACTSCROLL_COLOR'
+  | 'RECOIL_COLOR'
+  | 'RTK_COLOR'
+  | 'SASS_COLOR'
+  | 'SOLAPI_COLOR'
+  | 'STORYBOOK_COLOR'
+  | 'SWIPER_COLOR'
+  | 'TANSTACK_QUERY_COLOR'
+  | 'TANSTACK_TABLE_COLOR'
+  | 'VUETIFY_COLOR';
 export type BadgeType = 'rounded' | 'capsule';
 export type BadgeFillStyle = 'fill' | 'outline';
 

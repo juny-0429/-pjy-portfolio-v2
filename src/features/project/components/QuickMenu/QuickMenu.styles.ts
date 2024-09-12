@@ -8,7 +8,7 @@ export const quickMenuCss = {
     top: 130px;
     z-index: 100;
     flex-shrink: 0;
-    width: 160px;
+    width: 190px;
     height: auto;
     /* 헤더 높이: 130px, 컴포넌트 높이 반: 108px, 상단 패딩 값: 50px */
     margin-top: calc(50dvh - 130px - 108px - 50px);

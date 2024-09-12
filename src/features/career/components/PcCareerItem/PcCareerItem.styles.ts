@@ -52,7 +52,20 @@ export const pcCareerItemCss = {
 
   description: css`
     padding: 0 20px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
+  `,
+
+  contentList: css`
+    list-style: disc;
+    padding: 20px 0 0 40px;
+
+    li {
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 140%;
+    }
   `,
 };
