@@ -10,14 +10,6 @@ export const skills = [
     ],
   },
   {
-    category: '프레임워크 & 라이브러리',
-    skills: [
-      { label: 'React', description: '기술 설명 어쩌구 저쩌구' },
-      { label: 'Next js', description: '기술 설명 어쩌구 저쩌구' },
-      { label: 'Vue', description: '기술 설명 어쩌구 저쩌구' },
-    ],
-  },
-  {
     category: '마크업 & 스타일링',
     skills: [
       { label: 'HTML5', description: '기술 설명 어쩌구 저쩌구' },
@@ -30,6 +22,15 @@ export const skills = [
     ],
   },
   {
+    category: '상태관리',
+    skills: [
+      { label: 'Tanstack Query', description: '기술 설명 어쩌구 저쩌구' },
+      { label: 'Recoil', description: '기술 설명 어쩌구 저쩌구' },
+      { label: 'RTK (Redux Toolkit)', description: '기술 설명 어쩌구 저쩌구' },
+      { label: 'Pinia', description: '기술 설명 어쩌구 저쩌구' },
+    ],
+  },
+  {
     category: '툴 & 기타 라이브러리',
     skills: [
       { label: 'github', description: '기술 설명 어쩌구 저쩌구' },
@@ -37,7 +38,6 @@ export const skills = [
       { label: 'Notion', description: '기술 설명 어쩌구 저쩌구' },
       { label: 'gitbook', description: '기술 설명 어쩌구 저쩌구' },
       { label: 'Storybook', description: '기술 설명 어쩌구 저쩌구' },
-      { label: 'Chart js', description: '기술 설명 어쩌구 저쩌구' },
     ],
   },
 ];
