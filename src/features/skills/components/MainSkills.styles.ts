@@ -57,10 +57,9 @@ export const mainSkillsCss = {
   `,
 
   skillList: css`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 0;
   `,
 
   skillWrapper: css`
@@ -72,8 +71,8 @@ export const mainSkillsCss = {
 
   skillLabel: css`
     color: ${theme.colors.mainLightBlack};
-    font-size: 15px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 500;
 
     ${theme.media.pc} {
       font-size: 20px;

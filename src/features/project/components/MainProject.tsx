@@ -24,6 +24,7 @@ export default function MainProject() {
   return (
     <section css={mainProjectCss.wrapper}>
       <h2 css={[mainProjectCss.title, commonCss.onlyPcVisibleBlock]}>PROJECT</h2>
+      <p css={[mainProjectCss.description, commonCss.onlyPcVisibleBlock]}>각 프로젝트 별 상태 내용이 궁금하시다면 클릭 해주세요.</p>
 
       {/* mobile */}
       <ProjectList />

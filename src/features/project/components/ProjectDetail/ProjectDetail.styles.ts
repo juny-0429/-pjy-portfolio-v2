@@ -83,7 +83,7 @@ export const projectDetailCss = {
     font-weight: 800;
 
     ${theme.media.pc} {
-      font-size: 30px;
+      font-size: 26px;
     }
   `,
 
@@ -111,8 +111,8 @@ export const projectDetailCss = {
 
     ${theme.media.pc} {
       svg {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
       }
     }
   `,
@@ -165,8 +165,8 @@ export const projectDetailCss = {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 50px;
-    padding: 0 0 100px;
+    gap: 150px;
+    padding: 0 0 300px;
 
     ${theme.media.pc} {
       gap: 150px;

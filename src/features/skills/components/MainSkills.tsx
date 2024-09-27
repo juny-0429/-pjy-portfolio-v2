@@ -28,7 +28,6 @@ export default function MainSkills() {
                 {item.skills.map((skill, skillIndex) => (
                   <li key={skillIndex} css={mainSkillsCss.skillWrapper}>
                     <p css={mainSkillsCss.skillLabel}>{skill.label}</p>
-                    <p css={mainSkillsCss.skillDescription}>{skill.description}</p>
                   </li>
                 ))}
               </ul>

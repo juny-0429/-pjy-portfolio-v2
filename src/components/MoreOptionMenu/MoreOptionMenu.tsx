@@ -31,7 +31,7 @@ export default function MoreOptionMenu() {
       {/* 옵션 메뉴들 */}
       <div css={[moreOptionMenuCss.optionsContainer, isOpen ? moreOptionMenuCss.showOptions : moreOptionMenuCss.hideOptions]} style={{ display: isDisplayed ? 'flex' : 'none' }}>
         {/* 메일 바로 보내기 */}
-        <button type="button" css={moreOptionMenuCss.moreOptionMenu}>
+        <button type="button" css={moreOptionMenuCss.moreOptionMenu} onClick={() => (window.location.href = 'mailto:example@example.com')}>
           <FeatherIcons.Mail />
         </button>
 

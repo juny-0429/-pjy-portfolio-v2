@@ -24,4 +24,9 @@ export const mainProjectCss = {
     font-size: 40px;
     font-weight: 800;
   `,
+
+  description: css`
+    font-size: 20px;
+    font-weight: 400;
+  `,
 };
