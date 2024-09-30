@@ -29,7 +29,7 @@ export default function MultiLanguageMenu() {
             {locales &&
               locales.map((language) => (
                 <li key={language}>
-                  <Link href="/" locale={language} css={multiLanguageMenuCss.multilingualItem}>
+                  <Link href="/" locale={language} css={multiLanguageMenuCss.multilingualItem} onClick={toggleDrawer}>
                     <div css={multiLanguageMenuCss.flagWrapper}>
                       <Flag code={localeToFlagCodeMap[language]} css={multiLanguageMenuCss.flagIcon} />
                     </div>

@@ -7,7 +7,7 @@ export default function Footer() {
 
       <div css={footerCss.copyLightWrapper}>
         <p css={footerCss.copyLight}>{`© 2024 Park JunYoung.\nAll Rights Reserved.`}</p>
-        <p css={footerCss.update}>update. 2024/08/09</p>
+        <p css={footerCss.update}>update. 2024/09/30</p>
       </div>
     </footer>
   );
