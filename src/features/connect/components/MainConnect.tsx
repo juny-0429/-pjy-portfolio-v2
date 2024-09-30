@@ -3,8 +3,11 @@ import ConnectIconList from './ConnectIconList/ConnectIconList';
 import { INFORMATION } from '@/data/information.data';
 import { mainConnectCss } from './MainConnect.styles';
 import { commonCss } from '@/styles/common.styles';
+import { useTranslation } from 'next-i18next';
 
 export default function MainConnect() {
+  const { t } = useTranslation('connect');
+
   const handleCopyClick = (copyText: string) => {
     navigator.clipboard
       .writeText(copyText)
@@ -21,7 +24,7 @@ export default function MainConnect() {
       {/* title */}
       <div css={mainConnectCss.titleWrapper}>
         <h2 css={[mainConnectCss.title, commonCss.onlyPcVisibleBlock]}>CONNECT</h2>
-        <p css={mainConnectCss.description}>{`끝까지 봐주셔서 감사합니다.\n다양한 방법으로 저와 소통해 주시면 감사하겠습니다.`}</p>
+        <p css={mainConnectCss.description}>{t('description')}</p>
       </div>
 
       <ul css={mainConnectCss.connectWrapper}>
