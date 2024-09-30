@@ -37,7 +37,7 @@ export default function PcCareerItem({ index, title, logo, date, description, co
 
       <ul css={pcCareerItemCss.contentList}>
         {content.map((item, index) => (
-          <li key={index} style={{ color: textColor === theme.colors.mainLightGreen ? theme.colors.mainLightBlack : theme.colors.mainLightGray }}>
+          <li key={index} style={{ color: textColor === theme.colors.mainLightGreen ? theme.colors.mainGray : theme.colors.mainLightGray }}>
             {item}
           </li>
         ))}
