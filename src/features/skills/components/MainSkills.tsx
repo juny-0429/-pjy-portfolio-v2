@@ -27,7 +27,7 @@ export default function MainSkills() {
               <ul css={mainSkillsCss.skillList}>
                 {item.skills.map((skill, skillIndex) => (
                   <li key={skillIndex} css={mainSkillsCss.skillWrapper}>
-                    <p css={mainSkillsCss.skillLabel}>{skill.label}</p>
+                    <p css={[mainSkillsCss.skillLabel, themeMode === 'dark' && darkModeCss.darkModeColor]}>{skill.label}</p>
                   </li>
                 ))}
               </ul>
