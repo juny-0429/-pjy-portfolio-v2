@@ -7,7 +7,6 @@ import { FC, SVGProps } from 'react';
 export interface ArchivingItemType {
   title: string;
   icon: FC<SVGProps<SVGSVGElement>>;
-  description: string;
   linkList: Array<{ label: string; url: string }>;
 }
 
@@ -15,7 +14,6 @@ export const archivingList: { [key: string]: ArchivingItemType } = {
   gitbook: {
     title: 'gitbook',
     icon: GitbookIcon,
-    description: '최근 관심사와 이슈를 정리하는 깃북 입니다. 관심사 별 페이지를 정리하여 사용하고 있습니다.',
     linkList: [
       { label: 'Common Develop', url: INFORMATION.LINKS.GITBOOK.COMMON_DEVELOP_LINK },
       { label: 'Publishing', url: INFORMATION.LINKS.GITBOOK.PUBLISHING_LINK },
@@ -27,13 +25,11 @@ export const archivingList: { [key: string]: ArchivingItemType } = {
   github: {
     title: 'Github',
     icon: GithubIcon,
-    description: '개인 github입니다.',
-    linkList: [{ label: '깃허브 바로가기', url: INFORMATION.LINKS.GITHUB_LINK }],
+    linkList: [{ label: 'Go to Github', url: INFORMATION.LINKS.GITHUB_LINK }],
   },
   notion: {
     title: 'Notion',
     icon: NotionIcon,
-    description: '개인 notion입니다.',
-    linkList: [{ label: '노션 바로가기', url: INFORMATION.LINKS.NOTION_LINK }],
+    linkList: [{ label: 'Go to Notion', url: INFORMATION.LINKS.NOTION_LINK }],
   },
 };

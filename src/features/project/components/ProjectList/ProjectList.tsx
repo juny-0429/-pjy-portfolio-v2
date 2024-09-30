@@ -7,8 +7,10 @@ import sizes from '@/theme/sizes';
 import { commonCss, darkModeCss } from '@/styles/common.styles';
 import Link from 'next/link';
 import { useDarkMode } from '@/hooks/useDarkMode';
+import { useRouter } from 'next/router';
 
 export default function ProjectList() {
+  const { locale } = useRouter();
   const { themeMode } = useDarkMode();
 
   return (
@@ -21,7 +23,7 @@ export default function ProjectList() {
             </div>
 
             <div css={[projectListCss.projectTab, themeMode === 'dark' && projectListCss.darkModeProjectBackground]}>
-              <span>{project.team}</span>
+              <span>{locale === 'ko' ? project.team_ko : project.team_en}</span>
             </div>
 
             <div css={projectListCss.titleWrapper}>

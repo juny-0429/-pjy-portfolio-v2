@@ -7,6 +7,7 @@ export const archivingItemCss = {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+    width: 100%;
     height: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -52,18 +53,6 @@ export const archivingItemCss = {
 
     ${theme.media.pc} {
       font-size: 24px;
-    }
-  `,
-
-  description: css`
-    flex: 1;
-    font-size: 12px;
-    font-weight: 300;
-
-    color: ${theme.colors.mainLightBlack};
-
-    ${theme.media.pc} {
-      font-size: 16px;
     }
   `,
 

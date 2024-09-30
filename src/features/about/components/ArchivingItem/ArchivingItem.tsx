@@ -15,8 +15,6 @@ export default function ArchivingItem({ archivingItem }: Props) {
         <span css={archivingItemCss.title}>{archivingItem.title}</span>
       </div>
 
-      <p css={archivingItemCss.description}>{archivingItem.description}</p>
-
       <div css={archivingItemCss.linkList}>
         {archivingItem.linkList.map((item, index) => (
           <Link href={item.url} target="_blank" rel="noopener noreferrer" key={index} css={archivingItemCss.linkItem}>
