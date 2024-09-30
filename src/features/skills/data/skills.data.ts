@@ -1,6 +1,7 @@
 export const skills = [
   {
-    category: '프레임워크 & 프로그래밍 언어',
+    category_en: 'Framework & Programming Languages',
+    category_ko: '프레임워크 & 프로그래밍 언어',
     skills: [
       { label: 'React', description: '기술 설명 어쩌구 저쩌구' },
       { label: 'Next js', description: '기술 설명 어쩌구 저쩌구' },
@@ -10,7 +11,8 @@ export const skills = [
     ],
   },
   {
-    category: '마크업 & 스타일링',
+    category_en: 'Markup & Styling',
+    category_ko: '마크업 & 스타일링',
     skills: [
       { label: 'HTML5', description: '기술 설명 어쩌구 저쩌구' },
       { label: 'CSS3', description: '기술 설명 어쩌구 저쩌구' },
@@ -22,7 +24,8 @@ export const skills = [
     ],
   },
   {
-    category: '상태관리',
+    category_en: 'State Management',
+    category_ko: '상태관리',
     skills: [
       { label: 'Tanstack Query', description: '기술 설명 어쩌구 저쩌구' },
       { label: 'Recoil', description: '기술 설명 어쩌구 저쩌구' },
@@ -31,7 +34,8 @@ export const skills = [
     ],
   },
   {
-    category: '툴 & 기타 라이브러리',
+    category_en: 'Tools & Miscellaneous Libraries',
+    category_ko: '툴 & 기타 라이브러리',
     skills: [
       { label: 'github', description: '기술 설명 어쩌구 저쩌구' },
       { label: 'Figma', description: '기술 설명 어쩌구 저쩌구' },

@@ -4,9 +4,11 @@ import { mainSkillsCss } from './MainSkills.styles';
 import LogoSlider from './LogoSlider/LogoSlider';
 import { useDarkMode } from '@/hooks/useDarkMode';
 import { darkModeCss } from '@/styles/common.styles';
+import { useRouter } from 'next/router';
 
 export default function MainSkills() {
   const { themeMode } = useDarkMode();
+  const { locale } = useRouter();
 
   return (
     <section css={mainSkillsCss.wrapper}>
@@ -22,8 +24,9 @@ export default function MainSkills() {
 
           return (
             <div key={index} css={[mainSkillsCss.skillCategoryWrapper, colorStyle]}>
-              <h3 css={[mainSkillsCss.skillCategoryTitle, { color: colorStyle.color }, themeMode === 'dark' && darkModeCss.darkModeBackground]}>{item.category}</h3>
-
+              <h3 css={[mainSkillsCss.skillCategoryTitle, { color: colorStyle.color }, themeMode === 'dark' && darkModeCss.darkModeBackground]}>
+                {locale === 'ko' ? item.category_ko : item.category_en}
+              </h3>
               <ul css={mainSkillsCss.skillList}>
                 {item.skills.map((skill, skillIndex) => (
                   <li key={skillIndex} css={mainSkillsCss.skillWrapper}>
