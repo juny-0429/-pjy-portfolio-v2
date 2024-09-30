@@ -3,9 +3,11 @@ import { commonCss } from '@/styles/common.styles';
 import ProjectList from './ProjectList/ProjectList';
 import PcProjectList from './PcProjectList/PcProjectList';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'next-i18next';
 
 export default function MainProject() {
   const [isPc, setIsPc] = useState(false);
+  const { t } = useTranslation('project');
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,7 +26,7 @@ export default function MainProject() {
   return (
     <section css={mainProjectCss.wrapper}>
       <h2 css={[mainProjectCss.title, commonCss.onlyPcVisibleBlock]}>PROJECT</h2>
-      <p css={[mainProjectCss.description, commonCss.onlyPcVisibleBlock]}>각 프로젝트 별 상태 내용이 궁금하시다면 클릭 해주세요.</p>
+      <p css={[mainProjectCss.description, commonCss.onlyPcVisibleBlock]}>{t('description')}</p>
 
       {/* mobile */}
       <ProjectList />

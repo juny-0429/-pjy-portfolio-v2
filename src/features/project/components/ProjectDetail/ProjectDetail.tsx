@@ -16,8 +16,8 @@ import { commonCss } from '@/styles/common.styles';
 import Link from 'next/link';
 
 export default function ProjectDetail() {
-  const router = useRouter();
-  const projectId = Number(router.query.id);
+  const { locale, query } = useRouter();
+  const projectId = Number(query.id);
   const project = useProjectData(projectId);
 
   if (!project) {
@@ -103,7 +103,7 @@ export default function ProjectDetail() {
                   <section css={projectDetailCss.section}>
                     <div css={projectDetailCss.sectionWrapper}>
                       <FeatherIcons.Triangle css={projectDetailCss.sectionIcon} />
-                      <h3 css={projectDetailCss.detailSectionTitle}>{menu.label}</h3>
+                      <h3 css={projectDetailCss.detailSectionTitle}>{locale === 'ko' ? menu.label_ko : menu.label_en}</h3>
                     </div>
 
                     {Array.isArray(project.detail[menu.value as keyof typeof project.detail]) ? (

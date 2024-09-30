@@ -35,6 +35,7 @@ export const multiLanguageMenuCss = {
 
   label: css`
     white-space: nowrap;
+    color: ${theme.colors.mainGray};
     font-size: 24px;
     font-weight: 500;
   `,

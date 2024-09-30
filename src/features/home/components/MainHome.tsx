@@ -3,8 +3,11 @@ import Image from 'next/image';
 import PjyProfileImage from '@/assets/images/park-junyoung-profile.jpg';
 import FeatherIcons from '@/theme/featherIcons';
 import { commonCss } from '@/styles/common.styles';
+import { useTranslation } from 'next-i18next';
 
 export default function MainHome() {
+  const { t } = useTranslation('common');
+
   return (
     <section css={mainHomeCss.wrapper}>
       <div css={mainHomeCss.homeHeader}>
@@ -16,11 +19,15 @@ export default function MainHome() {
       <div css={mainHomeCss.content}>
         <div css={mainHomeCss.introductionWrapper}>
           <p css={mainHomeCss.introduction}>
-            <strong>트렌드</strong>를 끊임없이 학습하며,
+            <strong>{t('trend')}</strong>
+            {t('learning')}
           </p>
 
           <p css={mainHomeCss.introduction}>
-            <strong>효율적</strong>이고 <strong>유지보수 가능한 코드</strong>를 작성하기 위해 노력하고 있습니다.
+            <strong>{t('efficient')}</strong>
+            {t('and')}
+            <strong>{t('maintainableCode')}</strong>
+            {t('striving')}
           </p>
         </div>
 

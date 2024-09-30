@@ -13,8 +13,10 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/pagination';
 import Link from 'next/link';
 import { useDarkMode } from '@/hooks/useDarkMode';
+import { useRouter } from 'next/router';
 
 export default function PcProjectList() {
+  const { locale } = useRouter();
   const { themeMode } = useDarkMode();
 
   return (
@@ -41,7 +43,7 @@ export default function PcProjectList() {
               </div>
 
               <div css={[pcProjectCss.projectTab, themeMode === 'dark' && pcProjectCss.darkModeProjectBackground]}>
-                <span>{project.team}</span>
+                <span>{locale === 'ko' ? project.team_ko : project.team_en}</span>
               </div>
 
               <div css={pcProjectCss.titleWrapper}>
