@@ -2,17 +2,22 @@ import Image, { StaticImageData } from 'next/image';
 import { pcCareerItemCss } from './PcCareerItem.styles';
 import theme from '@/theme';
 
-interface Props {
-  index: number;
+interface ItemDataProps {
   title: string;
   logo: StaticImageData;
   date: string;
   description: string;
   content: string[];
+}
+
+interface Props {
+  index: number;
+  itemData: ItemDataProps;
   textColor: string;
 }
 
-export default function PcCareerItem({ index, title, logo, date, description, content, textColor }: Props) {
+export default function PcCareerItem({ index, itemData, textColor }: Props) {
+  const { title, logo, date, description, content } = itemData;
   const column = (index % 2) + 1;
   const row = index + 1;
 
