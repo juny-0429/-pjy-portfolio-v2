@@ -52,7 +52,7 @@ export default function MainCareer() {
                   gridRow: row,
                 }}
               >
-                <PcCareerItem index={index} title={item.title} logo={item.logo} date={item.date} description={item.description} content={item.content} textColor={textColors[index]} />
+                <PcCareerItem index={index} itemData={item} textColor={textColors[index]} />
               </motion.div>
             );
           })}
