@@ -14,7 +14,7 @@ export const badgeSize = {
 
   23: css`
     height: 23px;
-    padding: 4px;
+    padding: 4px 8px;
 
     font-size: 12px;
     font-weight: 700;

@@ -27,6 +27,7 @@ export default function MainSkills() {
               <h3 css={[mainSkillsCss.skillCategoryTitle, { color: colorStyle.color }, themeMode === 'dark' && darkModeCss.darkModeBackground]}>
                 {locale === 'ko' ? item.category_ko : item.category_en}
               </h3>
+
               <ul css={mainSkillsCss.skillList}>
                 {item.skills.map((skill, skillIndex) => (
                   <li key={skillIndex} css={mainSkillsCss.skillWrapper}>

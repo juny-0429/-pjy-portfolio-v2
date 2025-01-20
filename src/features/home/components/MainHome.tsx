@@ -19,15 +19,15 @@ export default function MainHome() {
       <div css={mainHomeCss.content}>
         <div css={mainHomeCss.introductionWrapper}>
           <p css={mainHomeCss.introduction}>
-            <strong>{t('trend')}</strong>
-            {t('learning')}
+            <strong>{t('1')}</strong>
+            {t('2')}
           </p>
 
           <p css={mainHomeCss.introduction}>
-            <strong>{t('efficient')}</strong>
-            {t('and')}
-            <strong>{t('maintainableCode')}</strong>
-            {t('striving')}
+            <strong>{t('3')}</strong>
+            {t('4')}
+            <strong>{t('5')}</strong>
+            {t('6')}
           </p>
         </div>
 

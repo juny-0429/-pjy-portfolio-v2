@@ -6,7 +6,7 @@ export const archivingItemCss = {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 6px;
+    gap: 12px;
     width: 100%;
     height: 100%;
     padding: 8px;

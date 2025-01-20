@@ -26,7 +26,7 @@ export const mainSkillsCss = {
 
   skillCategoryWrapper: css`
     position: relative;
-    padding: 16px 10px;
+    padding: 16px;
 
     border-radius: 10px;
     border: 1px solid ${theme.colors.mainDeepBlue};
@@ -59,7 +59,8 @@ export const mainSkillsCss = {
   skillList: css`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px 0;
+    gap: 20px 0;
+    padding-top: 10px;
   `,
 
   skillWrapper: css`
@@ -71,8 +72,10 @@ export const mainSkillsCss = {
 
   skillLabel: css`
     color: ${theme.colors.mainLightBlack};
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 300;
+    white-space: normal;
+    word-break: break-all;
 
     ${theme.media.pc} {
       font-size: 20px;

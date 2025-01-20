@@ -7,6 +7,8 @@ export const INFORMATION = {
   LINKS: {
     GITHUB_LINK: 'https://github.com/juny-0429',
     NOTION_LINK: 'https://juny0429.notion.site/Juny-DevNote-cfb53ea770cc4828a2aad5e97b5fd968?pvs=4',
+    COOKING_NOTION_LINK: 'https://juny0429.notion.site/16c51d0589198005be36fc6a384b2e42?pvs=4',
+    ESSAY_BLOG_LINK: 'https://blog.naver.com/parkyoung-essay',
     KAKAO_TALK_LINK: 'https://open.kakao.com/o/sJ92AfKg',
     GITBOOK: {
       COMMON_DEVELOP_LINK: 'https://juny-book.gitbook.io/common/',
