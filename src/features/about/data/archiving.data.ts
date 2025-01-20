@@ -23,13 +23,19 @@ export const archivingList: { [key: string]: ArchivingItemType } = {
     ],
   },
   github: {
-    title: 'Github',
+    title: 'developer',
     icon: GithubIcon,
-    linkList: [{ label: 'Go to Github', url: INFORMATION.LINKS.GITHUB_LINK }],
+    linkList: [
+      { label: 'Go to Github', url: INFORMATION.LINKS.GITHUB_LINK },
+      { label: 'Go to Notion', url: INFORMATION.LINKS.NOTION_LINK },
+    ],
   },
   notion: {
-    title: 'Notion',
+    title: 'hobby',
     icon: NotionIcon,
-    linkList: [{ label: 'Go to Notion', url: INFORMATION.LINKS.NOTION_LINK }],
+    linkList: [
+      { label: 'Go to Recipe', url: INFORMATION.LINKS.COOKING_NOTION_LINK },
+      { label: 'Go to Blog', url: INFORMATION.LINKS.ESSAY_BLOG_LINK },
+    ],
   },
 };

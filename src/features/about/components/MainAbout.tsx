@@ -26,13 +26,15 @@ export default function MainAbout() {
         </div>
 
         {/* mbti */}
-        <div css={mainAboutCss.mbtiList}>
-          {mbtiList.map((itemKey: string, index: number) => (
-            <Badge key={index} color="lightGreen" type="capsule" fillStyle="outline" cssStyle={sizes.badgeSize[23]}>
-              {t(itemKey)}
-            </Badge>
+        <ul css={mainAboutCss.mbtiList}>
+          {mbtiList.map((itemKey: string) => (
+            <li key={itemKey}>
+              <Badge color="lightGreen" type="capsule" fillStyle="outline" cssStyle={sizes.badgeSize[23]}>
+                {t(itemKey)}
+              </Badge>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* 자기 소개 */}
         <p css={mainAboutCss.introduction}>{t('introduction')}</p>
